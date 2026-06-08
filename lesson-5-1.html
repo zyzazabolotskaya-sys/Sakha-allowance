@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 5.1 | Алфавит и звуки</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 15px; overflow: hidden; }
+        .lecture-section th, .lecture-section td { border: 1px solid #d4e6c3; padding: 8px 12px; text-align: left; }
+        .lecture-section th { background: #e8f5e9; color: #2e6b3e; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 5.1: Алфавит и звуки (начальный уровень)</h2>
+            
+            <div class="lecture-section">
+                <h3>Лекция 1: Якутский алфавит — история и структура</h3>
+                <p>Современный якутский алфавит был утверждён в 1939 году на основе кириллицы. До этого якуты использовали латинский алфавит (1929-1939), а ещё раньше — письменность на основе русской графики, созданную миссионерами в XIX веке. Выбор кириллицы был связан с необходимостью унификации письменности народов СССР и доступностью типографского оборудования.</p>
+                <p>Всего в якутском алфавите <strong>40 букв</strong>. Для сравнения: в русском алфавите 33 буквы. Разница в 7 букв объясняется тем, что в якутском языке есть специфические звуки, отсутствующие в русском. Эти звуки обозначаются специальными буквами, которые были добавлены к стандартной кириллице.</p>
+                
+                <h3>Гласные буквы (8)</h3>
+                <table>
+                    <tr><th>Твёрдые</th><td>А</td><td>О</td><td>У</td><td>Ы</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><th>Мягкие</th><td>Э</td><td>И</td><td>Ү</td><td>Ө</td><td></td><td></td><td></td><td></td></tr>
+                </table>
+                <p>Важно запомнить, что буквы <strong>И</strong> и <strong>Ы</strong> — это разные звуки. Буква <strong>Ы</strong> — твёрдый гласный, произносится глубже, чем русский 'ы'. Буква <strong>И</strong> — мягкий гласный, как в русском языке.</p>
+                <p>Буквы <strong>Ө</strong> и <strong>Ү</strong> — уникальные для якутского языка. <strong>Ө</strong> произносится как нечто среднее между русскими 'о' и 'ё', с округлением губ. <strong>Ү</strong> — мягкий вариант 'у', как в немецком слове "über".</p>
+                
+                <h3>Согласные буквы (32)</h3>
+                <p>Согласных букв в якутском алфавите 32. К стандартным русским согласным добавлены специфические буквы: <strong>Ҕ, Ҥ, Һ, Дь, Нь</strong>. Эти буквы обозначают звуки, которых нет в русском языке, но которые очень важны для правильного произношения якутских слов.</p>
+                
+                <h3>Таблица особых букв</h3>
+                <table>
+                    <tr><th>Буква</th><th>Название</th><th>Произношение</th><th>Пример</th></tr>
+                    <tr><td>Ҕ</td><td>Гэ с хвостиком</td><td>звонкий фарингальный, похож на украинскую 'г'</td><td>аҕа (отец)</td></tr>
+                    <tr><td>Ҥ</td><td>Ҥэ</td><td>носовой 'нг', как в английском "sing"</td><td>саҥа (новый)</td></tr>
+                    <tr><td>Ө</td><td>Ө</td><td>между 'о' и 'ё', губы округлены</td><td>күөх (зелёный)</td></tr>
+                    <tr><td>Ү</td><td>Ү</td><td>мягкий 'у', как в немецком 'ü'</td><td>күл (смейся)</td></tr>
+                    <tr><td>Һ</td><td>Һэ</td><td>глухой фарингальный, глубокое 'х'</td><td>һаай (здоровый)</td></tr>
+                    <tr><td>Нь</td><td>Ньэ</td><td>мягкий 'н', как в слове "нью-йорк"</td><td>ньургуһун (подснежник)</td></tr>
+                    <tr><td>Дь</td><td>Дьэ</td><td>мягкий 'д', как в слове "дьявол"</td><td>дьиэ (дом)</td></tr>
+                </table>
+                
+                <h3>Гармония гласных — главный закон якутской фонетики</h3>
+                <p>Это самый важный закон в якутском языке. Он гласит: <strong>в одном слове могут быть только твёрдые или только мягкие гласные</strong>. Нельзя смешивать твёрдые и мягкие гласные в корне слова.</p>
+                <p><strong>Твёрдые гласные:</strong> А, О, У, Ы<br>
+                <strong>Мягкие гласные:</strong> Э, И, Ө, Ү</p>
+                <p><strong>Примеры слов с твёрдыми гласными:</strong> кыһыл (красный), оҕо (ребёнок), уу (вода), ас (еда).<br>
+                <strong>Примеры слов с мягкими гласными:</strong> күөх (зелёный), эбэ (бабушка), ийэ (мать), өрүс (река).</p>
+                <p>Это правило распространяется и на аффиксы (суффиксы). Например, если основа слова содержит твёрдые гласные, то и суффикс должен содержать твёрдые гласные. Если основа содержит мягкие — суффикс должен быть с мягкими гласными.</p>
+                <p>Пример: кыыл (зверь) + -гар (дательный падеж) → кыылга (зверю). Здесь везде твёрдые гласные.<br>
+                Пример: күөл (озеро) + -гэр (дательный падеж) → күөлгэ (озеру). Здесь везде мягкие гласные.</p>
+                
+                <h3>Ударение в якутском языке</h3>
+                <p>В якутском языке ударение обычно падает на <strong>последний слог</strong>. Это отличает якутский от русского, где ударение может падать на любой слог и даже перемещаться. Например: ыал (дом), ыаллар (дома), ыалларга (домам) — во всех формах ударение на последнем слоге.</p>
+                <p>Однако есть исключения: некоторые междометия и заимствованные слова могут иметь ударение на первом слоге. Например: телевизор (телевизор) — ударение на втором 'е'.</p>
+            </div>
+            
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "5-1";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Сколько букв в якутском алфавите? На сколько букв он больше русского? Перечислите все гласные буквы, разделяя их на твёрдые и мягкие.", answerKeywords: ["40", "7", "33", "а", "о", "у", "ы", "э", "и", "ө", "ү"], hint: "Используйте таблицу из лекции", explanation: "40 букв, на 7 больше русского. Гласные: твёрдые — А,О,У,Ы; мягкие — Э,И,Ө,Ү." },
+        { question: "2. Какие буквы являются уникальными для якутского языка? Напишите их и кратко опишите произношение каждой.", answerKeywords: ["Ҕ", "Ҥ", "Ө", "Ү", "Һ", "Нь", "Дь"], hint: "Особые буквы перечислены в таблице", explanation: "Ҕ — г с придыханием, Ҥ — нг, Ө — между О и Ё, Ү — мягкий У, Һ — глухой Х, Нь — мягкий Н, Дь — мягкий Д." },
+        { question: "3. Что такое гармония гласных? Сформулируйте правило своими словами и приведите 3 примера слов с твёрдыми гласными и 3 примера слов с мягкими гласными.", answerKeywords: ["твёрдые", "мягкие", "кыһыл", "күөх", "ыал", "дьиэ"], hint: "Вспомните главный закон фонетики", explanation: "В слове могут быть только твёрдые или только мягкие гласные." },
+        { question: "4. Объясните, куда падает ударение в якутских словах. Приведите 3 примера разных слов и покажите, на какой слог падает ударение.", answerKeywords: ["последний", "слог", "ыал", "дьиэ", "күөл"], hint: "В якутском ударение обычно на последнем слоге", explanation: "Ударение падает на последний слог слова." },
+        { question: "5. Переведите 5 слов на якутский язык: мать, отец, дом, вода, огонь. Используйте правильные гласные.", answerKeywords: ["ийэ", "аҕа", "дьиэ", "уу", "уот"], hint: "Используйте словарь из лекции", explanation: "Ийэ — мать, аҕа — отец, дьиэ — дом, уу — вода, уот — огонь." },
+        { question: "6. Переведите 5 слов с якутского на русский: күөх, кыһыл, саҥа, аҕа, уу.", answerKeywords: ["зелёный", "красный", "новый", "отец", "вода"], hint: "Слова из лекции", explanation: "Күөх — зелёный, кыһыл — красный, саҥа — новый, аҕа — отец, уу — вода." },
+        { question: "7. Составьте 5 простых предложений на якутском языке (по 4-6 слов), используя слова из упражнений 5 и 6.", answerKeywords: ["аҕа", "ийэ", "дьиэ", "уу", "уот"], hint: "Используйте глагол 'баар' (есть)", explanation: "Пример: Аҕа дьиэҕэ баар. Ийэ ууну аҕалла." },
+        { question: "8. Объясните, почему в слове 'күөх' нельзя написать 'куох'? Какое правило здесь действует?", answerKeywords: ["гармония", "мягкие", "гласные", "ү", "ө"], hint: "Посмотрите на гласные в слове", explanation: "В слове күөх только мягкие гласные (Ү, Ө), поэтому нельзя писать твёрдый У." },
+        { question: "9. Напишите небольшой диалог (8-10 реплик) между двумя людьми, которые знакомятся друг с другом. Используйте приветствия и вопросы об имени и возрасте.", answerKeywords: ["дорообо", "аатыҥ", "ким", "саастааххын"], hint: "Начните с приветствия", explanation: "Пример: - Дорообо! Эн аатыҥ ким? - Мин аатым Айсен. Эн тугунан дьарыктанаҕын?" },
+        { question: "10. Напишите короткий рассказ (8-10 предложений) на якутском языке о своей семье. Укажите имена, возраст и занятия членов семьи.", answerKeywords: ["аҕа", "ийэ", "быраат", "балыс", "үөрэнэбин"], hint: "Опишите каждого члена семьи", explanation: "Рассказ должен быть связным и грамматически верным." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    function loadProgress() {
+        try { const saved = localStorage.getItem(`lesson_${lessonId}_progress`); if (saved) { const data = JSON.parse(saved); exercisesCompleted = data.completed; lessonPassed = data.passed; } } catch(e) {}
+        try { const saved = localStorage.getItem('yakut_lessons_done'); if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; } catch(e) {}
+        updateUI();
+    }
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        document.getElementById('progressFill').style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; try { const s = localStorage.getItem('yakut_lessons_done'); if (s) stored = JSON.parse(s); } catch(e) {}
+                if (!stored.includes(lessonId)) { stored.push(lessonId); localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); if (window.userProgress?.lessonsDone) window.userProgress.lessonsDone.push(lessonId); }
+            }
+            status.innerHTML = 'Пройдено'; status.className = 'status-badge status-completed'; resetBtn.style.display = 'inline-block';
+        } else { status.innerHTML = 'Не пройдено (' + count + '/10)'; status.className = 'status-badge status-not-completed'; resetBtn.style.display = 'none'; }
+        saveProgress();
+    }
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const lower = answer.toLowerCase();
+        const matchCount = ex.answerKeywords.filter(k => lower.includes(k.toLowerCase())).length;
+        const isCorrect = matchCount >= ex.answerKeywords.length * 0.5;
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { exercisesCompleted[idx] = true; resultDiv.innerHTML = '✓ Правильно! ' + (ex.explanation || ''); resultDiv.className = 'ex-result correct'; }
+        else { resultDiv.innerHTML = '✗ Неправильно. ' + (ex.hint || 'Попробуйте ещё раз.'); resultDiv.className = 'ex-result incorrect'; }
+        updateUI(); saveProgress();
+    }
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); div.className = 'exercise';
+            div.innerHTML = `<h3>Упражнение ${idx+1}</h3><p>${ex.question}</p><textarea id="ex-input-${idx}" rows="4" placeholder="Введите ваш ответ..."></textarea><button class="check-btn" onclick="checkExercise(${idx}, document.getElementById('ex-input-${idx}').value)">Проверить</button><div id="ex-result-${idx}" class="ex-result"></div>`;
+            if (exercisesCompleted[idx]) { div.querySelector(`#ex-result-${idx}`).innerHTML = '✓ Выполнено!'; div.querySelector(`#ex-result-${idx}`).className = 'ex-result correct'; }
+            container.appendChild(div);
+        });
+    }
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока?')) {
+            exercisesCompleted.fill(false); lessonPassed = false;
+            let stored = []; try { const s = localStorage.getItem('yakut_lessons_done'); if (s) stored = JSON.parse(s); } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            if (window.userProgress?.lessonsDone) window.userProgress.lessonsDone = window.userProgress.lessonsDone.filter(id => id !== lessonId);
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); updateUI(); alert('Прогресс сброшен!');
+        }
+    }
+    document.getElementById('resetLessonBtn').onclick = resetLesson;
+    document.getElementById('prevBtn').onclick = () => window.location.href = 'lesson-7-20.html';
+    document.getElementById('nextBtn').onclick = () => window.location.href = 'lesson-5-2.html';
+    loadProgress(); renderExercises(); updateUI();
+</script>
+</body>
+</html>

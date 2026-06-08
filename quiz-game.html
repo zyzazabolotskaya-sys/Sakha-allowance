@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина | Саха Тыла</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        /* ==================== АНИМАЦИИ ФОНА ==================== */
+        @keyframes floatBg1 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) translateX(20px) rotate(5deg); }
+        }
+        
+        @keyframes floatBg2 {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+            50% { transform: translateY(25px) translateX(-25px) rotate(-3deg); }
+        }
+        
+        @keyframes pulseBg {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Фоновый контейнер */
+        .game-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+        }
+        
+        /* Паттерн с орнаментом */
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) 2px, transparent 2px, transparent 8px);
+            pointer-events: none;
+        }
+        
+        /* Плавающие круги */
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,245,0.15);
+            pointer-events: none;
+        }
+        
+        .circle1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            left: -100px;
+            animation: floatBg1 20s ease-in-out infinite;
+        }
+        
+        .circle2 {
+            width: 250px;
+            height: 250px;
+            bottom: -80px;
+            right: -80px;
+            animation: floatBg2 18s ease-in-out infinite;
+        }
+        
+        .circle3 {
+            width: 150px;
+            height: 150px;
+            top: 40%;
+            left: 70%;
+            animation: floatBg1 15s ease-in-out infinite 2s;
+        }
+        
+        .circle4 {
+            width: 100px;
+            height: 100px;
+            top: 70%;
+            left: 10%;
+            animation: floatBg2 12s ease-in-out infinite 1s;
+        }
+        
+        .circle5 {
+            width: 180px;
+            height: 180px;
+            top: 15%;
+            right: 15%;
+            animation: pulseBg 8s ease-in-out infinite;
+        }
+        
+        /* Плавающие точки */
+        .floating-dot {
+            position: absolute;
+            background: rgba(219, 163, 52, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .dot1 { width: 8px; height: 8px; top: 20%; left: 15%; animation: floatBg1 10s ease-in-out infinite; }
+        .dot2 { width: 12px; height: 12px; top: 50%; right: 20%; animation: floatBg2 12s ease-in-out infinite 1s; }
+        .dot3 { width: 6px; height: 6px; bottom: 30%; left: 25%; animation: floatBg1 8s ease-in-out infinite 2s; }
+        .dot4 { width: 10px; height: 10px; top: 75%; right: 35%; animation: floatBg2 14s ease-in-out infinite 0.5s; }
+        .dot5 { width: 5px; height: 5px; top: 35%; left: 45%; animation: floatBg1 9s ease-in-out infinite 3s; }
+        .dot6 { width: 7px; height: 7px; bottom: 15%; right: 55%; animation: floatBg2 11s ease-in-out infinite 2.5s; }
+        
+        /* Якутский орнамент (декоративные элементы) */
+        .ornament-pattern {
+            position: absolute;
+            font-size: 40px;
+            color: rgba(219, 163, 52, 0.08);
+            pointer-events: none;
+            font-family: serif;
+        }
+        
+        .ornament1 { top: 5%; left: 2%; transform: rotate(-15deg); animation: rotateSlow 60s linear infinite; }
+        .ornament2 { bottom: 8%; right: 3%; transform: rotate(10deg); animation: rotateSlow 45s linear infinite reverse; }
+        .ornament3 { top: 30%; right: 8%; font-size: 30px; animation: rotateSlow 50s linear infinite; }
+        .ornament4 { bottom: 20%; left: 5%; font-size: 35px; animation: rotateSlow 55s linear infinite reverse; }
+        .ornament5 { top: 60%; left: 15%; font-size: 25px; animation: rotateSlow 40s linear infinite; }
+        
+        /* Основной контейнер */
+        .game-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .game-header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 40px;
+            padding: 15px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .game-header h1 {
+            color: #2a6e3a;
+            font-size: 1.8rem;
+        }
+        
+        .level-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px);
+            padding: 15px 20px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+        }
+        
+        .level-badge {
+            background: #2a6e3a;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        
+        .score-badge {
+            background: #dba334;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        
+        .round-badge {
+            background: #c8e6c9;
+            color: #2e7d32;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        
+        .quiz-question {
+            background: rgba(255,255,245,0.9);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+        
+        .quiz-question-text {
+            font-size: 1.2rem;
+            color: #2e6b3e;
+            font-weight: bold;
+        }
+        
+        .quiz-options {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .quiz-option {
+            background: #f5f9ef;
+            padding: 12px 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d4e6c3;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        
+        .quiz-option:hover {
+            background: #e8f5e9;
+            transform: scale(1.02);
+        }
+        
+        .quiz-option.correct-highlight {
+            background: #c8e6c9;
+            border-color: #2e7d32;
+        }
+        
+        .quiz-option.wrong-highlight {
+            background: #ffccbc;
+            border-color: #bf360c;
+        }
+        
+        .game-result {
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        
+        .game-result.correct { background: #c8e6c9; color: #2e7d32; }
+        .game-result.incorrect { background: #ffccbc; color: #bf360c; }
+        
+        .restart-btn, .next-level-btn {
+            background: #dba334;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+        
+        .restart-btn:hover, .next-level-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .next-level-btn {
+            background: #2a6e3a;
+        }
+        
+        .reset-progress-btn {
+            background: #8b0000;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .reset-progress-btn:hover {
+            background: #660000;
+            transform: translateY(-2px);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #2a6e3a;
+            text-decoration: none;
+            font-weight: bold;
+            background: rgba(255,255,255,0.3);
+            padding: 5px 15px;
+            border-radius: 30px;
+            backdrop-filter: blur(3px);
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            transform: translateX(-5px);
+            color: #dba334;
+        }
+        
+        .congrats {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #c8e6c9, #e8f5e9);
+            border-radius: 28px;
+            margin: 20px 0;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .congrats h2 {
+            color: #2a6e3a;
+            margin-bottom: 15px;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 600px) {
+            .floating-circle { display: none; }
+        }
+    </style>
+</head>
+<body>
+<!-- Фоновый контент -->
+<div class="game-background">
+    <div class="pattern-overlay"></div>
+    <div class="floating-circle circle1"></div>
+    <div class="floating-circle circle2"></div>
+    <div class="floating-circle circle3"></div>
+    <div class="floating-circle circle4"></div>
+    <div class="floating-circle circle5"></div>
+    <div class="floating-dot dot1"></div>
+    <div class="floating-dot dot2"></div>
+    <div class="floating-dot dot3"></div>
+    <div class="floating-dot dot4"></div>
+    <div class="floating-dot dot5"></div>
+    <div class="floating-dot dot6"></div>
+    <div class="ornament-pattern ornament1">✦</div>
+    <div class="ornament-pattern ornament2">✧</div>
+    <div class="ornament-pattern ornament3">❦</div>
+    <div class="ornament-pattern ornament4">⚘</div>
+    <div class="ornament-pattern ornament5">✦</div>
+</div>
+
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Викторина</div>
+        <div class="school-badge">Игра</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="../lessons/index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <div class="game-container">
+            <a href="index.html" class="back-link">← Назад к играм</a>
+            <div class="game-header">
+                <h1>Викторина</h1>
+                <p>Проверьте свои знания о якутском языке и культуре</p>
+            </div>
+            
+            <div class="level-info">
+                <span class="level-badge" id="levelDisplay">Уровень 1</span>
+                <span class="score-badge" id="scoreDisplay">Счёт: 0</span>
+                <span class="round-badge" id="roundDisplay">Вопрос: 0/5</span>
+            </div>
+            
+            <div id="gameContent"></div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="reset-progress-btn" onclick="resetProgress()">Сбросить прогресс</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-ornament"></div>
+        <p>© МБОУ «Хоточчунская» ООШ</p>
+    </footer>
+</div>
+
+<script>
+    // Вопросы по уровням сложности (10 уровней по 5 вопросов = 50 вопросов)
+    const questionsByLevel = {
+        1: [
+            { question: "Как будет 'здравствуйте' по-якутски?", options: ["Дорообо", "Махтал", "Көрсүөххэ диэри", "Эҕэрдэ"], correct: 0 },
+            { question: "Как переводится слово 'күн'?", options: ["Луна", "Солнце", "Звезда", "Небо"], correct: 1 },
+            { question: "Как будет 'мать' по-якутски?", options: ["Аҕа", "Ийэ", "Эбэ", "Эһэ"], correct: 1 },
+            { question: "Как будет 'вода' по-якутски?", options: ["Күн", "Ый", "Уу", "Ат"], correct: 2 },
+            { question: "Как будет 'собака' по-якутски?", options: ["Куоска", "Ыт", "Куобах", "Балык"], correct: 1 }
+        ],
+        2: [
+            { question: "Какая буква есть в якутском алфавите, но отсутствует в русском?", options: ["Ы", "Й", "Ө", "Э"], correct: 2 },
+            { question: "Как сказать 'спасибо' по-якутски?", options: ["Дорообо", "Махтал", "Кэскил", "Барыта"], correct: 1 },
+            { question: "Как будет 'дом' по-якутски?", options: ["Ураса", "Балаган", "Дьиэ", "Остуол"], correct: 2 },
+            { question: "Как будет 'отец' по-якутски?", options: ["Аҕа", "Ийэ", "Уол", "Кыыс"], correct: 0 },
+            { question: "Как будет 'брат' по-якутски?", options: ["Балыс", "Быраат", "Доҕор", "Аймах"], correct: 1 }
+        ],
+        3: [
+            { question: "Какой цвет обозначает слово 'күөх'?", options: ["Красный", "Синий/зелёный", "Жёлтый", "Белый"], correct: 1 },
+            { question: "Как будет 'учитель' по-якутски?", options: ["Үөрэнээччи", "Учуутал", "Доҕор", "Аҕа"], correct: 1 },
+            { question: "Что такое 'хомус'?", options: ["Барабан", "Варган", "Флейта", "Гусли"], correct: 1 },
+            { question: "Как будет 'до свидания' по-якутски?", options: ["Дорообо", "Махтал", "Көрсүөххэ диэри", "Эҕэрдэ"], correct: 2 },
+            { question: "Как будет 'книга' по-якутски?", options: ["Оскуола", "Кылаас", "Кинигэ", "Уруок"], correct: 2 }
+        ],
+        4: [
+            { question: "Как будет 'лошадь' по-якутски?", options: ["Ат", "Ынах", "Таба", "Сылгы"], correct: 0 },
+            { question: "Что означает слово 'ысыах'?", options: ["Новый год", "Праздник лета", "Свадьба", "День рождения"], correct: 1 },
+            { question: "Как будет 'рыба' по-якутски?", options: ["Куобах", "Балык", "Көтөр", "Кыыл"], correct: 1 },
+            { question: "Как будет 'кошка' по-якутски?", options: ["Ыт", "Куобах", "Куоска", "Саһыл"], correct: 2 },
+            { question: "Как будет 'заяц' по-якутски?", options: ["Куобах", "Балык", "Куоска", "Тииҥ"], correct: 0 }
+        ],
+        5: [
+            { question: "Как будет 'школа' по-якутски?", options: ["Оскуола", "Кылаас", "Уруок", "Библиотека"], correct: 0 },
+            { question: "Как будет 'ученик' по-якутски?", options: ["Учуутал", "Үөрэнээччи", "Директор", "Библиотекарь"], correct: 1 },
+            { question: "Как будет 'красный' по-якутски?", options: ["Күөх", "Кыһыл", "Үрүҥ", "Хара"], correct: 1 },
+            { question: "Как будет 'белый' по-якутски?", options: ["Кыһыл", "Күөх", "Үрүҥ", "Хара"], correct: 2 },
+            { question: "Как будет 'чёрный' по-якутски?", options: ["Кыһыл", "Күөх", "Үрүҥ", "Хара"], correct: 3 }
+        ],
+        6: [
+            { question: "Как будет 'сестра' по-якутски?", options: ["Быраат", "Балыс", "Доҕор", "Аймах"], correct: 1 },
+            { question: "Как будет 'олень' по-якутски?", options: ["Ат", "Ынах", "Таба", "Сылгы"], correct: 2 },
+            { question: "Как будет 'варган' по-якутски?", options: ["Хомус", "Барабан", "Флейта", "Домбра"], correct: 0 },
+            { question: "Как будет 'кумыс' по-якутски?", options: ["Саламат", "Кымыс", "Суорат", "Кёрчех"], correct: 1 },
+            { question: "Как будет 'праздник лета' по-якутски?", options: ["Ысыах", "Олонхо", "Оһуохай", "Тойук"], correct: 0 }
+        ],
+        7: [
+            { question: "Что такое 'ураса'?", options: ["Зимнее жилище", "Летнее жилище", "Свадебный обряд", "Национальный танец"], correct: 1 },
+            { question: "Как будет 'гость' по-якутски?", options: ["Ыал", "Доҕор", "Ыалдьыт", "Аймах"], correct: 2 },
+            { question: "Как будет 'лес' по-якутски?", options: ["Күөл", "Тыа", "Хайа", "Өрүс"], correct: 1 },
+            { question: "Как будет 'гора' по-якутски?", options: ["Күөл", "Тыа", "Хайа", "Өрүс"], correct: 2 },
+            { question: "Как будет 'река' по-якутски?", options: ["Күөл", "Тыа", "Хайа", "Өрүс"], correct: 3 }
+        ],
+        8: [
+            { question: "Кто такой 'олонхосут'?", options: ["Певец", "Танцор", "Сказитель", "Художник"], correct: 2 },
+            { question: "Как будет 'работа' по-якутски?", options: ["Үлэ", "Санаа", "Күүс", "Дьол"], correct: 0 },
+            { question: "Как будет 'друг' по-якутски?", options: ["Аймах", "Доҕор", "Ыал", "Кэргэн"], correct: 1 },
+            { question: "Как будет 'счастье' по-якутски?", options: ["Үлэ", "Санаа", "Күүс", "Дьол"], correct: 3 },
+            { question: "Как будет 'мысль' по-якутски?", options: ["Үлэ", "Санаа", "Күүс", "Дьол"], correct: 1 }
+        ],
+        9: [
+            { question: "Как будет 'традиция' по-якутски?", options: ["Үгэс", "Ыһыах", "Оһуохай", "Олонхо"], correct: 0 },
+            { question: "Как будет 'сила' по-якутски?", options: ["Үлэ", "Санаа", "Күүс", "Дьол"], correct: 2 },
+            { question: "Как будет 'мир' по-якутски?", options: ["Дойду", "Сир", "Аан дойду", "Халлаан"], correct: 2 },
+            { question: "Как будет 'звезда' по-якутски?", options: ["Ый", "Күн", "Сулус", "Халлаан"], correct: 2 },
+            { question: "Как будет 'небо' по-якутски?", options: ["Сир", "Дойду", "Халлаан", "Күн"], correct: 2 }
+        ],
+        10: [
+            { question: "Как переводится 'кэрэхсэбил'?", options: ["Интерес", "Уважение", "Дружба", "Радость"], correct: 0 },
+            { question: "Как переводится 'маанылааһын'?", options: ["Интерес", "Уважение", "Дружба", "Радость"], correct: 1 },
+            { question: "Как переводится 'доҕордоһуу'?", options: ["Интерес", "Уважение", "Дружба", "Радость"], correct: 2 },
+            { question: "Как будет 'знание' по-якутски?", options: ["Билии", "Үөрэх", "Санаа", "Күүс"], correct: 0 },
+            { question: "Как будет 'будущее' по-якутски?", options: ["Билиҥҥи", "Булуҥҥу", "Кэлиҥҥи", "Ааспыт"], correct: 2 }
+        ]
+    };
+    
+    let currentLevel = 1;
+    let currentQuestionIndex = 0;
+    let levelScore = 0;
+    let currentQuestions = [];
+    let locked = false;
+    
+    const questionsPerLevel = 5;
+    
+    function loadProgress() {
+        const savedLevel = localStorage.getItem('quiz_game_level');
+        if (savedLevel) {
+            currentLevel = parseInt(savedLevel);
+            if (currentLevel > 10) currentLevel = 10;
+        }
+        updateLevelDisplay();
+    }
+    
+    function saveProgress() {
+        localStorage.setItem('quiz_game_level', currentLevel);
+    }
+    
+    function resetProgress() {
+        if (confirm('Сбросить прогресс? Все пройденные уровни будут удалены.')) {
+            currentLevel = 1;
+            saveProgress();
+            startLevel();
+        }
+    }
+    
+    function updateLevelDisplay() {
+        document.getElementById('levelDisplay').innerHTML = `Уровень ${currentLevel}`;
+        document.getElementById('roundDisplay').innerHTML = `Вопрос: ${currentQuestionIndex}/${questionsPerLevel}`;
+        document.getElementById('scoreDisplay').innerHTML = `Счёт: ${levelScore}/${currentQuestionIndex}`;
+    }
+    
+    function shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    }
+    
+    function startLevel() {
+        if (currentLevel > 10) {
+            currentLevel = 10;
+        }
+        currentQuestions = shuffleArray([...questionsByLevel[currentLevel]]);
+        currentQuestionIndex = 0;
+        levelScore = 0;
+        locked = false;
+        updateLevelDisplay();
+        renderGame();
+    }
+    
+    function renderGame() {
+        const container = document.getElementById('gameContent');
+        
+        if (currentQuestionIndex >= questionsPerLevel) {
+            if (currentLevel === 10) {
+                container.innerHTML = `
+                    <div class="congrats">
+                        <h2>ПОЗДРАВЛЯЕМ!</h2>
+                        <h3>Вы прошли ВСЕ 10 уровней викторины!</h3>
+                        <p>Вы настоящий знаток якутского языка и культуры!</p>
+                        <div class="button-group">
+                            <button class="restart-btn" onclick="resetToLevel1()">Начать заново</button>
+                            <button class="next-level-btn" onclick="window.location.href='index.html'">Вернуться к играм</button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="congrats">
+                        <h2>Уровень ${currentLevel} пройден!</h2>
+                        <p>Вы ответили правильно на ${levelScore} из ${questionsPerLevel} вопросов!</p>
+                        <div class="button-group">
+                            <button class="restart-btn" onclick="restartCurrentLevel()">Пройти заново</button>
+                            <button class="next-level-btn" onclick="nextLevel()">Следующий уровень →</button>
+                        </div>
+                    </div>
+                `;
+            }
+            return;
+        }
+        
+        const q = currentQuestions[currentQuestionIndex];
+        container.innerHTML = `
+            <div class="quiz-question">
+                <div class="quiz-question-text">${q.question}</div>
+                <div class="quiz-options" id="quizOptions">
+                    ${q.options.map((opt, idx) => `<div class="quiz-option" onclick="selectOption(${idx})">${opt}</div>`).join('')}
+                </div>
+            </div>
+            <div id="resultDiv" class="game-result"></div>
+        `;
+        locked = false;
+        updateLevelDisplay();
+    }
+    
+    function selectOption(selectedIndex) {
+        if (locked) return;
+        locked = true;
+        
+        const q = currentQuestions[currentQuestionIndex];
+        const isCorrect = (selectedIndex === q.correct);
+        const resultDiv = document.getElementById('resultDiv');
+        
+        if (isCorrect) {
+            levelScore++;
+            resultDiv.innerHTML = 'Правильно!';
+            resultDiv.className = 'game-result correct';
+        } else {
+            resultDiv.innerHTML = `Неправильно. Правильный ответ: ${q.options[q.correct]}`;
+            resultDiv.className = 'game-result incorrect';
+        }
+        
+        const options = document.querySelectorAll('.quiz-option');
+        options[q.correct].classList.add('correct-highlight');
+        if (!isCorrect) {
+            options[selectedIndex].classList.add('wrong-highlight');
+        }
+        
+        currentQuestionIndex++;
+        updateLevelDisplay();
+        
+        setTimeout(() => {
+            renderGame();
+        }, 1500);
+    }
+    
+    function nextLevel() {
+        if (currentLevel < 10) {
+            currentLevel++;
+            saveProgress();
+            startLevel();
+        }
+    }
+    
+    function restartCurrentLevel() {
+        startLevel();
+    }
+    
+    function resetToLevel1() {
+        currentLevel = 1;
+        saveProgress();
+        startLevel();
+    }
+    
+    loadProgress();
+    startLevel();
+    
+    window.selectOption = selectOption;
+    window.nextLevel = nextLevel;
+    window.restartCurrentLevel = restartCurrentLevel;
+    window.resetToLevel1 = resetToLevel1;
+    window.resetProgress = resetProgress;
+</script>
+</body>
+</html>

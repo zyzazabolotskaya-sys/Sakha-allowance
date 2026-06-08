@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 7-6 | Сложносочинённые предложения | Саха тыла</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .lecture-section table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 15px; overflow: hidden; }
+        .lecture-section th, .lecture-section td { border: 1px solid #d4e6c3; padding: 8px 12px; text-align: left; vertical-align: top; }
+        .lecture-section th { background: #e8f5e9; color: #2e6b3e; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        .grammar-table { width: 100%; margin: 15px 0; }
+        .grammar-table td { padding: 8px; }
+        .note-box { background: #e3f2fd; border-radius: 16px; padding: 15px; margin: 15px 0; border-left: 4px solid #1976d2; font-size: 0.95rem; }
+        .sentence-example { background: #fff8e1; padding: 10px 15px; border-radius: 16px; margin: 10px 0; border-left: 4px solid #dba334; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 7-6: Сложносочинённые предложения</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Сложносочинённые предложения в якутском языке</h3>
+                <p>Сложносочинённое предложение — это сложное предложение, в котором два или более простых предложения соединяются с помощью сочинительных союзов или интонационно. Части сложносочинённого предложения равноправны по смыслу и грамматически независимы друг от друга.</p>
+                
+                <div class="note-box">
+                    Важно: В якутском языке части сложносочинённого предложения могут соединяться как с помощью союзов, так и бессоюзно. Порядок частей часто соответствует порядку событий во времени.
+                </div>
+                
+                <h3>Виды сложносочинённых предложений</h3>
+                
+                <h3>1. Сложносочинённые предложения с соединительными союзами</h3>
+                <p>Выражают одновременность или последовательность событий. Основные союзы: <strong>уонна</strong> (и), <strong>да</strong> (и, также), <strong>эмиэ</strong> (тоже), <strong>онтон</strong> (затем, потом).</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Күн таҕыста уонна түөрт буолла. — Солнце взошло, и наступило утро.<br>
+                    Кини ырыаны ылла, мин эмиэ ыллым. — Он спел песню, я тоже спел.<br>
+                    Оҕолор оскуолаҕа бардылар, онтон учуутал кэллэ. — Дети пошли в школу, затем пришёл учитель.
+                </div>
+                
+                <h3>2. Сложносочинённые предложения с противительными союзами</h3>
+                <p>Выражают противопоставление или сравнение. Основные союзы: <strong>ол эрээри</strong> (но, однако), <strong>гэна</strong> (но, зато), <strong>оннук эрээри</strong> (однако).</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Мин бардым, ол эрээри кини кэлбэтэ. — Я пошёл, но он не пришёл.<br>
+                    Үлэ ыарахан, гэна интэриэһинэй. — Работа трудная, зато интересная.<br>
+                    Кини элбэхтик аахта, оннук эрээри өйдөөбөтө. — Он много читал, однако не понял.
+                </div>
+                
+                <h3>3. Сложносочинённые предложения с разделительными союзами</h3>
+                <p>Выражают чередование событий или выбор между ними. Основные союзы: <strong>эбэтэр</strong> (или), <strong>арай</strong> (либо), <strong>эбэтэр да...</strong> (то ли...).</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Бүгүн кэлиэм, эбэтэр сарсын кэлиэм. — Сегодня приду, или завтра приду.<br>
+                    Арай кини кэлиэ, арай мин барабын. — Либо он придёт, либо я уйду.<br>
+                    Эбэтэр да ардах түһэр, эбэтэр да күн тахсар. — То ли дождь идёт, то ли солнце выходит.
+                </div>
+                
+                <h3>4. Сложносочинённые предложения с присоединительными союзами</h3>
+                <p>Вторая часть присоединяет дополнительную информацию. Основные союзы: <strong>онтон</strong> (а, также), <strong>даҕаны</strong> (да и).</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Кини улахан доҕор, онтон сүбэһит эмиэ. — Он большой друг, а также советник.<br>
+                    Күн тымный, даҕаны тыал үрэр. — Холодно, да и ветер дует.
+                </div>
+                
+                <h3>Бессоюзные сложносочинённые предложения</h3>
+                <p>В бессоюзных сложносочинённых предложениях части соединяются только интонацией. На письме между частями ставится запятая.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Күн киирдэ, сырдык намтаата. — Солнце зашло, света стало меньше.<br>
+                    Ырыа бүттэ, киһи барахсатта. — Песня кончилась, народ захлопал.<br>
+                    Сайын кэллэ, күөх от үүннэ. — Лето пришло, зелёная трава выросла.
+                </div>
+                
+                <h3>Знаки препинания в сложносочинённых предложениях</h3>
+                <ul>
+                    <li>Между частями сложносочинённого предложения обычно ставится запятая.</li>
+                    <li>Если части сильно распространены или уже содержат запятые, может ставиться точка с запятой.</li>
+                    <li>Если союз соединяет два очень коротких предложения, запятая может не ставиться.</li>
+                </ul>
+                
+                <h3>Таблица основных союзов для сложносочинённых предложений</h3>
+                <table class="grammar-table">
+                    <tr><th>Тип связи</th><th>Якутский союз</th><th>Русский эквивалент</th><th>Пример</th></tr>
+                    <tr><td rowspan="2">Соединительные</td><td>уонна</td><td>и</td><td>Кэллим уонна көрдүм</td></tr>
+                    <tr><td>эмиэ</td><td>тоже</td><td>Мин эмиэ бардым</td></tr>
+                    <tr><td rowspan="2">Противительные</td><td>ол эрээри</td><td>но</td><td>Ыалдьар, ол эрээри кэлэр</td></tr>
+                    <tr><td>гэна</td><td>зато</td><td>Чэпчэки, гэна кытаанах</td></tr>
+                    <tr><td rowspan="2">Разделительные</td><td>эбэтэр</td><td>или</td><td>Мин эбэтэр кини</td></tr>
+                    <tr><td>арай</td><td>либо</td><td>Арай биһиги, арай кинилэр</td></tr>
+                </table>
+                
+                <h3>Примеры для анализа</h3>
+                <ul>
+                    <li>Мин кэлбитим, уонна кини эмиэ кэлбит. — Я пришёл, и он тоже пришёл.</li>
+                    <li>Кини ырыаны ыллыыр, ол эрээри куһаҕан. — Он поёт, но плохо.</li>
+                    <li>Сайылыкка барабыт эбэтэр куоракка хаалабыт. — Поедем на дачу или останемся в городе.</li>
+                    <li>Тыал үрэр, ардах түһэр. — Ветер дует, дождь идёт.</li>
+                    <li>Учуутал кэллэ, онтон үөрэнээччилэр киирдилэр. — Учитель пришёл, затем вошли ученики.</li>
+                    <li>Кини элбэҕи билэр, гэна эппэт. — Он много знает, но не говорит.</li>
+                    <li>Үөрэммин саҕалыыбын, эбэтэр үлэлииргэ барабын. — Начну учиться, или пойду работать.</li>
+                    <li>Күн тахсаары гынна, көтөрдөр ыллаатылар. — Солнце собралось взойти, птицы запели.</li>
+                </ul>
+                
+                <h3>Важные замечания</h3>
+                <p>В якутском языке сложносочинённые предложения используются реже, чем в русском. Часто вместо них употребляются простые предложения с деепричастными оборотами или последовательность самостоятельных предложений. При переводе с русского на якутский важно помнить о различиях в употреблении союзов.</p>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "7-6";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Какой союз используется для соединения частей сложносочинённого предложения со значением 'и'?", answerKeywords: ["уонна"], hint: "Соединительный союз", explanation: "Уонна — и." },
+        { question: "2. Какой союз используется для соединения частей сложносочинённого предложения со значением 'но'?", answerKeywords: ["ол эрээри"], hint: "Противительный союз", explanation: "Ол эрээри — но, однако." },
+        { question: "3. Какой союз используется для соединения частей сложносочинённого предложения со значением 'или'?", answerKeywords: ["эбэтэр"], hint: "Разделительный союз", explanation: "Эбэтэр — или." },
+        { question: "4. Переведите на русский язык: 'Күн таҕыста уонна түөрт буолла.'", answerKeywords: ["солнце взошло и наступило утро"], hint: "Күн — солнце, таҕыста — взошло, уонна — и, түөрт — утро, буолла — наступило", explanation: "Солнце взошло, и наступило утро." },
+        { question: "5. Переведите на якутский язык: 'Я пошёл, но он не пришёл.'", answerKeywords: ["мин", "бардым", "ол эрээри", "кини", "кэлбэтэ"], hint: "Используйте союз 'ол эрээри'", explanation: "Мин бардым, ол эрээри кини кэлбэтэ." },
+        { question: "6. Переведите на русский язык: 'Бүгүн кэлиэм, эбэтэр сарсын кэлиэм.'", answerKeywords: ["сегодня приду или завтра приду"], hint: "Бүгүн — сегодня, кэлиэм — приду, эбэтэр — или, сарсын — завтра", explanation: "Сегодня приду или завтра приду." },
+        { question: "7. Составьте сложносочинённое предложение на якутском языке с союзом 'уонна'.", answerKeywords: ["уонна"], hint: "Используйте соединительный союз 'уонна'", explanation: "Пример: Мин аахтым уонна суруйдум. (Я прочитал и написал.)" },
+        { question: "8. Составьте сложносочинённое предложение на якутском языке с союзом 'ол эрээри'.", answerKeywords: ["ол эрээри"], hint: "Используйте противительный союз 'ол эрээри'", explanation: "Пример: Барыахпын баҕарабын, ол эрээри кыаллыбат. (Хочу пойти, но не получается.)" },
+        { question: "9. Переведите на якутский язык: 'Солнце взошло, птицы запели.' (бессоюзное предложение)", answerKeywords: ["күн", "тахсыбыт", "көтөрдөр", "ыллаатылар"], hint: "Два простых предложения без союза, разделённые запятой", explanation: "Күн тахсыбыт, көтөрдөр ыллаатылар." },
+        { question: "10. Напишите 3 сочинительных союза, которые используются в сложносочинённых предложениях на якутском языке.", answerKeywords: ["уонна", "ол эрээри", "эбэтэр", "онтон", "гэна", "арай"], hint: "Например: уонна (и), ол эрээри (но), эбэтэр (или)", explanation: "Любые три: уонна (и), ол эрээри (но), эбэтэр (или), онтон (затем), гэна (зато)." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    
+    function loadProgress() { 
+        try { 
+            const saved = localStorage.getItem(`lesson_${lessonId}_progress`); 
+            if (saved) { 
+                const data = JSON.parse(saved); 
+                exercisesCompleted = data.completed; 
+                lessonPassed = data.passed; 
+            } 
+        } catch(e) {} 
+        try { 
+            const saved = localStorage.getItem('yakut_lessons_done'); 
+            if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; 
+        } catch(e) {} 
+        updateUI(); 
+    }
+    
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) progressFill.style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; 
+                try { 
+                    const s = localStorage.getItem('yakut_lessons_done'); 
+                    if (s) stored = JSON.parse(s); 
+                } catch(e) {}
+                if (!stored.includes(lessonId)) { 
+                    stored.push(lessonId); 
+                    localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); 
+                }
+            }
+            if (status) {
+                status.innerHTML = 'Пройдено (' + count + '/10)';
+                status.className = 'status-badge status-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'inline-block';
+        } else { 
+            if (status) {
+                status.innerHTML = 'Не пройдено (' + count + '/10)';
+                status.className = 'status-badge status-not-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'none';
+        }
+        saveProgress();
+    }
+    
+    function normalizeAnswer(str) {
+        if (!str) return '';
+        return str.toLowerCase()
+            .replace(/[ъь]/g, '')
+            .replace(/[^\wа-яёөүҥһ]/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+    
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const normalizedAnswer = normalizeAnswer(answer);
+        let isCorrect = false;
+        
+        if (idx === 9) {
+            let foundCount = 0;
+            const correctWords = ["уонна", "ол эрээри", "эбэтэр", "онтон", "гэна", "арай"];
+            const answerLower = normalizedAnswer;
+            for (let word of correctWords) {
+                if (answerLower.includes(word)) {
+                    foundCount++;
+                }
+            }
+            isCorrect = foundCount >= 2;
+        } else if (idx === 8) {
+            const hasKun = normalizedAnswer.includes("күн");
+            const hasTahsybyt = normalizedAnswer.includes("тахсыбыт") || normalizedAnswer.includes("тахсыста");
+            const hasKotorDor = normalizedAnswer.includes("көтөрдөр");
+            const hasYllaatylar = normalizedAnswer.includes("ыллаатылар");
+            isCorrect = (hasKun && (hasTahsybyt || hasKun) && hasKotorDor && hasYllaatylar);
+        } else if (idx === 7) {
+            const hasOlEreeri = normalizedAnswer.includes("ол эрээри");
+            isCorrect = hasOlEreeri;
+        } else if (idx === 6) {
+            const hasUonna = normalizedAnswer.includes("уонна");
+            isCorrect = hasUonna;
+        } else if (idx === 5) {
+            const hasKeliEm = normalizedAnswer.includes("кэлиэм");
+            const hasEbeter = normalizedAnswer.includes("эбэтэр");
+            isCorrect = (hasKeliEm && hasEbeter);
+        } else if (idx === 4) {
+            const hasMin = normalizedAnswer.includes("мин");
+            const hasBardym = normalizedAnswer.includes("бардым");
+            const hasOlEreeri = normalizedAnswer.includes("ол эрээри");
+            const hasKebete = normalizedAnswer.includes("кэлбэтэ");
+            isCorrect = (hasMin && hasBardym && hasOlEreeri && hasKebete);
+        } else {
+            const allKeywordsPresent = ex.answerKeywords.every(keyword => 
+                normalizedAnswer.includes(keyword.toLowerCase())
+            );
+            isCorrect = allKeywordsPresent;
+        }
+        
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { 
+            exercisesCompleted[idx] = true; 
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Верно. ' + (ex.explanation || '');
+                resultDiv.className = 'ex-result correct';
+            }
+        } else { 
+            exercisesCompleted[idx] = false;
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Неверно. ' + (ex.hint || 'Попробуйте ещё раз, сверьтесь с лекцией.');
+                resultDiv.className = 'ex-result incorrect';
+            }
+        }
+        updateUI(); 
+        saveProgress();
+    }
+    
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); 
+            div.className = 'exercise';
+            div.innerHTML = '<h3>Упражнение ' + (idx+1) + '</h3><p>' + ex.question + '</p><textarea id="ex-input-' + idx + '" rows="3" placeholder="Введите ваш ответ на якутском языке..."></textarea><button class="check-btn" onclick="checkExercise(' + idx + ', document.getElementById(\'ex-input-' + idx + '\').value)">Проверить</button><div id="ex-result-' + idx + '" class="ex-result"></div>';
+            if (exercisesCompleted[idx]) { 
+                const resultDiv = div.querySelector('#ex-result-' + idx);
+                if (resultDiv) {
+                    resultDiv.innerHTML = 'Выполнено. ' + (ex.explanation || '');
+                    resultDiv.className = 'ex-result correct';
+                }
+            }
+            container.appendChild(div);
+        });
+    }
+    
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока? Все ваши ответы будут удалены.')) {
+            exercisesCompleted.fill(false); 
+            lessonPassed = false;
+            let stored = []; 
+            try { 
+                const s = localStorage.getItem('yakut_lessons_done'); 
+                if (s) stored = JSON.parse(s); 
+            } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); 
+            updateUI(); 
+            alert('Прогресс урока сброшен.');
+        }
+    }
+    
+    function init() {
+        loadProgress(); 
+        renderExercises(); 
+        updateUI();
+        const resetBtn = document.getElementById('resetLessonBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (resetBtn) resetBtn.onclick = resetLesson;
+        if (prevBtn) prevBtn.onclick = () => window.location.href = 'lesson-7-5.html';
+        if (nextBtn) nextBtn.onclick = () => window.location.href = 'lesson-7-7.html';
+    }
+    
+    document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

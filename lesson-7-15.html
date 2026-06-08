@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 7-15 | Якутская литература | Саха тыла</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .lecture-section table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 15px; overflow: hidden; }
+        .lecture-section th, .lecture-section td { border: 1px solid #d4e6c3; padding: 8px 12px; text-align: left; vertical-align: top; }
+        .lecture-section th { background: #e8f5e9; color: #2e6b3e; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        .grammar-table { width: 100%; margin: 15px 0; }
+        .grammar-table td { padding: 8px; }
+        .note-box { background: #e3f2fd; border-radius: 16px; padding: 15px; margin: 15px 0; border-left: 4px solid #1976d2; font-size: 0.95rem; }
+        .sentence-example { background: #fff8e1; padding: 10px 15px; border-radius: 16px; margin: 10px 0; border-left: 4px solid #dba334; }
+        .writer-card { background: white; border-radius: 16px; padding: 15px; margin: 15px 0; border: 1px solid #d4e6c3; }
+        .writer-name { font-weight: bold; color: #2a6e3a; font-size: 1.1rem; margin-bottom: 5px; }
+        .writer-years { color: #888; font-size: 0.85rem; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 7-15: Якутская литература</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Якутская литература — обзор</h3>
+                <p>Якутская литература — это литература народа саха, создаваемая на якутском языке. Она имеет богатые устные традиции (фольклор) и письменную литературу, которая начала развиваться в XIX веке после создания якутской письменности. Якутская литература отражает историю, культуру, обычаи и мировоззрение народа саха.</p>
+                
+                <div class="note-box">
+                    Важно: Основой якутской литературы является устное народное творчество — олонхо, оһуохай, тойук, ырыалар (песни), остуоруйалар (сказки), өс хоһоонноро (пословицы) и др.
+                </div>
+                
+                <h3>Устное народное творчество (Фольклор)</h3>
+                <p>Якутский фольклор — один из самых богатых среди народов Сибири. Он включает:</p>
+                <ul>
+                    <li><strong>Олонхо</strong> — героический эпос, признанный ЮНЕСКО шедевром устного нематериального культурного наследия человечества. Олонхо повествует о подвигах богатырей, борьбе добра и зла, устройстве вселенной.</li>
+                    <li><strong>Оһуохай</strong> — хороводная песня-танец, исполняемая на праздниках.</li>
+                    <li><strong>Тойук</strong> — импровизированное песнопение, часто исполняемое сказителями.</li>
+                    <li><strong>Остуоруйалар</strong> — сказки о животных, волшебные и бытовые сказки.</li>
+                    <li><strong>Өс хоһоонноро</strong> — пословицы и поговорки.</li>
+                    <li><strong>Таабырыннар</strong> — загадки.</li>
+                </ul>
+                
+                <h3>Основатели якутской письменной литературы</h3>
+                
+                <div class="writer-card">
+                    <div class="writer-name">Алексей Елисеевич Кулаковский (Өксөкүлээх Өлөксөй)</div>
+                    <div class="writer-years">1877 — 1926</div>
+                    <p>Основатель якутской письменной литературы. Поэт, учёный, просветитель. Основные произведения: «Письмо якутской интеллигенции», «Да будет стыдно!», «Конгура», «Байанай». Создал якутский литературный язык.</p>
+                </div>
+                
+                <div class="writer-card">
+                    <div class="writer-name">Алампа (Софрон Петрович Данилов)</div>
+                    <div class="writer-years">1878 — 1942</div>
+                    <p>Поэт, драматург, один из основоположников якутской литературы. Автор драмы «Остуолба» (Столбы), стихов и поэм.</p>
+                </div>
+                
+                <div class="writer-card">
+                    <div class="writer-name">Платон Алексеевич Ойунский</div>
+                    <div class="writer-years">1893 — 1939</div>
+                    <p>Классик якутской литературы, поэт, прозаик, драматург, учёный-фольклорист. Автор знаменитого романа-эпопеи «Күндэлээн», поэмы «Уол оҕолор уонна кыыс оҕолор», драмы «Кыһыл ойуун» (Красный шаман).</p>
+                </div>
+                
+                <div class="writer-card">
+                    <div class="writer-name">Николай Егорович Мординов — Амма Аччыгыйа</div>
+                    <div class="writer-years">1906 — 1994</div>
+                    <p>Народный писатель Якутии. Автор романа «Сааскы кэм» (Весенняя пора), повести «Күндээнэ», рассказов о жизни якутского народа.</p>
+                </div>
+                
+                <div class="writer-card">
+                    <div class="writer-name">Дмитрий Кононович Сивцев — Суорун Омоллоон</div>
+                    <div class="writer-years">1906 — 2005</div>
+                    <p>Писатель, драматург, фольклорист. Автор драмы «Мааппа» (Колодец), романа «Аймалҕан» (Смута), множества пьес и рассказов.</p>
+                </div>
+                
+                <h3>Классики якутской литературы XX века</h3>
+                
+                <div class="writer-card">
+                    <div class="writer-name">Софрон Прокопьевич Данилов</div>
+                    <div class="writer-years">1922 — 1993</div>
+                    <p>Народный писатель Якутии. Автор романа «Мин ыччаппар анаан» (Посвящается моим сверстникам), повести «Көмүс күһүн» (Золотая осень), многих рассказов и очерков.</p>
+                </div>
+                
+                <div class="writer-card">
+                    <div class="writer-name">Николай Алексеевич Лугинов</div>
+                    <div class="writer-years">1948 — настоящее время</div>
+                    <p>Современный якутский писатель, народный писатель Якутии. Автор трилогии «По велению Чингисхана», «Таинственный меридиан», «Жестокий век».</p>
+                </div>
+                
+                <div class="writer-card">
+                    <div class="writer-name">Иван Михайлович Гоголев — Кындыл</div>
+                    <div class="writer-years">1930 — 1998</div>
+                    <p>Народный поэт Якутии. Автор многих поэтических сборников, в том числе «Мин ырыам» (Моя песня), «Кындыл сулус» (Яркая звезда).</p>
+                </div>
+                
+                <h3>Основные жанры якутской литературы</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Жанр</th><th>Якутское название</th><th>Примеры произведений</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+  
+——</th>
+                        <td>Поэзия</th>
+                        <td>Хоһоон</th>
+                        <td>Кулаковский, Ойунский, Кындыл</th>
+                        </tr>
+                        <tr>
+<td>Проза (роман, повесть, рассказ)</th>
+                        <td>Проза (роман, кэпсээн)</th>
+                        <td>Ойунский, Мординов, Лугинов</th>
+                        </tr>
+                        <tr>
+<td>Драматургия</th>
+                        <td>Драма</th>
+                        <td>Ойунский, Сивцев, Алампа</th>
+                        </tr>
+                        <tr>
+<td>Детская литература</th>
+                        <td>Оҕо литературата</th>
+                        <td>Мординов, Данилов, Тарасов</th>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Якутская детская литература</h3>
+                <ul>
+                    <li><strong>Тимофей Егорович Сметанин (1919-1947)</strong> — поэт, автор стихов для детей и взрослых.</li>
+                    <li><strong>Вениамин Васильевич Яковлев (1926-2003)</strong> — детский писатель, автор рассказов о животных и природе.</li>
+                    <li><strong>Василий Васильевич Тарасов (1939-2010)</strong> — детский поэт, автор весёлых стихов и песен.</li>
+                </ul>
+                
+                <h3>Современная якутская литература</h3>
+                <p>Сегодня якутская литература продолжает активно развиваться. Работают Союз писателей Якутии, издаются книги на якутском языке, проводятся литературные конкурсы и фестивали. Среди современных авторов:</p>
+                <ul>
+                    <li>Николай Лугинов — исторические романы</li>
+                    <li>Гаврил Андросов — поэзия</li>
+                    <li>Петр Захаров — проза</li>
+                    <li>Сардана Федотова — поэзия и проза</li>
+                </ul>
+                
+                <h3>Значение якутской литературы</h3>
+                <div class="sentence-example">
+                    Якутская литература играет важную роль в сохранении и развитии якутского языка, культуры и самосознания народа. Она знакомит читателей с историей, традициями и ценностями народа саха, воспитывает любовь к родному языку и уважение к культуре предков.
+                </div>
+                
+                <h3>Примеры на якутском языке из произведений</h3>
+                <ul>
+                    <li><strong>Өксөкүлээх Өлөксөй:</strong> «Саха саҥата — саха омук саҥата, кини тыла — кини өйүн-санаатын көстөрө.» — Якутская речь — речь якутского народа, его язык — отражение его ума и души.</li>
+                    <li><strong>П. Ойунский:</strong> «Үөрэнэ сырыттахха эрэ киһи өйө-санаата сайдар.» — Только когда человек учится, его ум и душа развиваются.</li>
+                    <li><strong>Амма Аччыгыйа:</strong> «Дьол — аҕыйахтарыгар ананан бэриллибэтэх. Кини хас биирдии киһиэхэ баар.» — Счастье не дано только немногим. Оно есть у каждого человека.</li>
+                </ul>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "7-15";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Кто считается основателем якутской письменной литературы?", answerKeywords: ["Алексей Кулаковский", "Өксөкүлээх Өлөксөй", "Кулаковский"], hint: "Поэт и просветитель", explanation: "Алексей Елисеевич Кулаковский (Өксөкүлээх Өлөксөй) — основатель якутской письменной литературы." },
+        { question: "2. Как называется героический эпос якутского народа?", answerKeywords: ["Олонхо"], hint: "Признан ЮНЕСКО шедевром", explanation: "Олонхо — героический эпос якутского народа." },
+        { question: "3. Кто автор романа-эпопеи «Күндэлээн»?", answerKeywords: ["Ойунский", "Платон Ойунский"], hint: "Классик якутской литературы", explanation: "Платон Алексеевич Ойунский — автор романа-эпопеи «Күндэлээн»." },
+        { question: "4. Кто из якутских писателей создал драму «Кыһыл ойуун» (Красный шаман)?", answerKeywords: ["Ойунский", "Платон Ойунский"], hint: "Тот же автор, что и «Күндэлээн»", explanation: "Платон Ойунский — автор драмы «Кыһыл ойуун»." },
+        { question: "5. Как звали народного писателя Якутии, автора романа «Сааскы кэм» (Весенняя пора)?", answerKeywords: ["Мординов", "Амма Аччыгыйа", "Николай Мординов"], hint: "Псевдоним — Амма Аччыгыйа", explanation: "Николай Егорович Мординов — Амма Аччыгыйа." },
+        { question: "6. Кто из современных якутских писателей написал трилогию «По велению Чингисхана»?", answerKeywords: ["Лугинов", "Николай Лугинов"], hint: "Народный писатель Якутии", explanation: "Николай Алексеевич Лугинов." },
+        { question: "7. Как называется якутская хороводная песня-танец?", answerKeywords: ["Оһуохай"], hint: "Исполняется на праздниках", explanation: "Оһуохай — хороводная песня-танец." },
+        { question: "8. Напишите имя основателя якутской письменной литературы на якутском языке.", answerKeywords: ["Өксөкүлээх Өлөксөй"], hint: "Псевдоним", explanation: "Өксөкүлээх Өлөксөй (Алексей Кулаковский)." },
+        { question: "9. Кто из якутских поэтов носил псевдоним «Кындыл»?", answerKeywords: ["Гоголев", "Иван Гоголев"], hint: "Народный поэт", explanation: "Иван Михайлович Гоголев — Кындыл." },
+        { question: "10. Напишите три жанра якутского фольклора.", answerKeywords: ["олонхо", "оһуохай", "тойук", "остуоруйа", "таабырын", "өс хоһооно"], hint: "Устное народное творчество", explanation: "1) Олонхо; 2) Оһуохай; 3) Тойук; 4) Остуоруйа (сказка); 5) Таабырын (загадка); 6) Өс хоһооно (пословица)." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    
+    function loadProgress() { 
+        try { 
+            const saved = localStorage.getItem(`lesson_${lessonId}_progress`); 
+            if (saved) { 
+                const data = JSON.parse(saved); 
+                exercisesCompleted = data.completed; 
+                lessonPassed = data.passed; 
+            } 
+        } catch(e) {} 
+        try { 
+            const saved = localStorage.getItem('yakut_lessons_done'); 
+            if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; 
+        } catch(e) {} 
+        updateUI(); 
+    }
+    
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) progressFill.style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; 
+                try { 
+                    const s = localStorage.getItem('yakut_lessons_done'); 
+                    if (s) stored = JSON.parse(s); 
+                } catch(e) {}
+                if (!stored.includes(lessonId)) { 
+                    stored.push(lessonId); 
+                    localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); 
+                }
+            }
+            if (status) {
+                status.innerHTML = 'Пройдено (' + count + '/10)';
+                status.className = 'status-badge status-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'inline-block';
+        } else { 
+            if (status) {
+                status.innerHTML = 'Не пройдено (' + count + '/10)';
+                status.className = 'status-badge status-not-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'none';
+        }
+        saveProgress();
+    }
+    
+    function normalizeAnswer(str) {
+        if (!str) return '';
+        return str.toLowerCase()
+            .replace(/[ъь]/g, '')
+            .replace(/[^\wа-яёөүҥһ]/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+    
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const normalizedAnswer = normalizeAnswer(answer);
+        let isCorrect = false;
+        
+        if (idx === 9) {
+            let foundCount = 0;
+            const correctWords = ["олонхо", "оһуохай", "тойук", "остуоруйа", "таабырын", "өс хоһооно"];
+            const answerLower = normalizedAnswer;
+            for (let word of correctWords) {
+                if (answerLower.includes(word)) {
+                    foundCount++;
+                }
+            }
+            isCorrect = foundCount >= 2;
+        } else if (idx === 8) {
+            const hasGogolev = normalizedAnswer.includes("гоголев") || normalizedAnswer.includes("кындыл");
+            isCorrect = hasGogolev;
+        } else if (idx === 7) {
+            const hasOksokuleeh = normalizedAnswer.includes("өксөкүлээх") || normalizedAnswer.includes("өлөксөй");
+            isCorrect = hasOksokuleeh;
+        } else if (idx === 6) {
+            const hasOsukhojay = normalizedAnswer.includes("оһуохай");
+            isCorrect = hasOsukhojay;
+        } else if (idx === 5) {
+            const hasLuginov = normalizedAnswer.includes("лугинов");
+            isCorrect = hasLuginov;
+        } else {
+            const allKeywordsPresent = ex.answerKeywords.every(keyword => 
+                normalizedAnswer.includes(keyword.toLowerCase())
+            );
+            isCorrect = allKeywordsPresent;
+        }
+        
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { 
+            exercisesCompleted[idx] = true; 
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Верно. ' + (ex.explanation || '');
+                resultDiv.className = 'ex-result correct';
+            }
+        } else { 
+            exercisesCompleted[idx] = false;
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Неверно. ' + (ex.hint || 'Попробуйте ещё раз, сверьтесь с лекцией.');
+                resultDiv.className = 'ex-result incorrect';
+            }
+        }
+        updateUI(); 
+        saveProgress();
+    }
+    
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); 
+            div.className = 'exercise';
+            div.innerHTML = '<h3>Упражнение ' + (idx+1) + '</h3><p>' + ex.question + '</p><textarea id="ex-input-' + idx + '" rows="3" placeholder="Введите ваш ответ..."></textarea><button class="check-btn" onclick="checkExercise(' + idx + ', document.getElementById(\'ex-input-' + idx + '\').value)">Проверить</button><div id="ex-result-' + idx + '" class="ex-result"></div>';
+            if (exercisesCompleted[idx]) { 
+                const resultDiv = div.querySelector('#ex-result-' + idx);
+                if (resultDiv) {
+                    resultDiv.innerHTML = 'Выполнено. ' + (ex.explanation || '');
+                    resultDiv.className = 'ex-result correct';
+                }
+            }
+            container.appendChild(div);
+        });
+    }
+    
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока? Все ваши ответы будут удалены.')) {
+            exercisesCompleted.fill(false); 
+            lessonPassed = false;
+            let stored = []; 
+            try { 
+                const s = localStorage.getItem('yakut_lessons_done'); 
+                if (s) stored = JSON.parse(s); 
+            } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); 
+            updateUI(); 
+            alert('Прогресс урока сброшен.');
+        }
+    }
+    
+    function init() {
+        loadProgress(); 
+        renderExercises(); 
+        updateUI();
+        const resetBtn = document.getElementById('resetLessonBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (resetBtn) resetBtn.onclick = resetLesson;
+        if (prevBtn) prevBtn.onclick = () => window.location.href = 'lesson-7-14.html';
+        if (nextBtn) nextBtn.onclick = () => window.location.href = 'lesson-7-16.html';
+    }
+    
+    document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 7-8 | Причастные обороты | Саха тыла</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .lecture-section table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 15px; overflow: hidden; }
+        .lecture-section th, .lecture-section td { border: 1px solid #d4e6c3; padding: 8px 12px; text-align: left; vertical-align: top; }
+        .lecture-section th { background: #e8f5e9; color: #2e6b3e; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        .grammar-table { width: 100%; margin: 15px 0; }
+        .grammar-table td { padding: 8px; }
+        .note-box { background: #e3f2fd; border-radius: 16px; padding: 15px; margin: 15px 0; border-left: 4px solid #1976d2; font-size: 0.95rem; }
+        .sentence-example { background: #fff8e1; padding: 10px 15px; border-radius: 16px; margin: 10px 0; border-left: 4px solid #dba334; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 7-8: Причастные обороты</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Причастные обороты в якутском языке</h3>
+                <p>Причастный оборот — это конструкция, состоящая из причастия и зависимых от него слов. В якутском языке причастные обороты выполняют функцию определения и соответствуют русским придаточным определительным предложениям. Они широко используются в письменной и устной речи, позволяя сделать высказывание более кратким и выразительным.</p>
+                
+                <div class="note-box">
+                    Важно: Причастный оборот в якутском языке всегда стоит перед определяемым словом, в отличие от русского языка, где он может стоять как до, так и после определяемого слова.
+                </div>
+                
+                <h3>Виды причастных оборотов по времени</h3>
+                
+                <h3>1. Причастный оборот настоящего времени</h3>
+                <p>Образуется с помощью причастий на <strong>-ааччы</strong>, <strong>-ээччи</strong>, <strong>-ооччу</strong>, <strong>-өөччү</strong>. Обозначает действие, которое происходит постоянно или является характерным для предмета.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Үөрэнээччи устудьуоннар лекцияҕа олороллор. — Обучающиеся студенты сидят на лекции.<br>
+                    Ааҕааччы оҕолор библиотекаҕа сылдьаллар. — Читающие дети ходят в библиотеку.<br>
+                    Саха тылын үөрэтээччи учуутал кини. — Преподающий якутский язык учитель — он.
+                </div>
+                
+                <h3>2. Причастный оборот прошедшего времени</h3>
+                <p>Образуется с помощью причастий на <strong>-быт</strong>, <strong>-бит</strong>, <strong>-пыт</strong>, <strong>-пит</strong>. Обозначает действие, которое уже совершилось.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Суруйбут сурук столга сытар. — Написанное письмо лежит на столе.<br>
+                    Көрбүт киинэм интэриэһинэй этэ. — Увиденный мной фильм был интересным.<br>
+                    Ааҕыбыт кинигэм минээҕин. — Прочитанная мной книга — моя.
+                </div>
+                
+                <h3>3. Причастный оборот будущего времени</h3>
+                <p>Образуется с помощью причастий на <strong>-ыах</strong>, <strong>-иэх</strong>, <strong>-уох</strong>, <strong>-үөх</strong>. Обозначает действие, которое должно произойти.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Кэлиэх ыалдьыттар манна олоруохтара. — Гости, которые придут, сядут здесь.<br>
+                    Ааҕыах кинигэлэр библиотекаҕа бааллар. — Книги, которые будут прочитаны, есть в библиотеке.<br>
+                    Үөрэниэх үөрэнээччилэр саалаҕа киирдилэр. — Ученики, которые будут учиться, вошли в зал.
+                </div>
+                
+                <h3>Склонение причастий в обороте</h3>
+                <p>Причастия в составе причастного оборота могут склоняться по падежам, числам и притяжанию, согласуясь с определяемым словом.</p>
+                
+                <table class="grammar-table">
+                    <tr><th>Падеж</th><th>Форма причастия</th><th>Пример</th></tr>
+                    <tr><td>Именительный</td><td>-быт</td><td>ааҕыбыт кинигэ</td></tr>
+                    <tr><td>Винительный</td><td>-быт+ын</td><td>ааҕыбыт кинигэни</td></tr>
+                    <tr><td>Дательный</td><td>-быт+а</td><td>ааҕыбыт кинигэҕэ</td></tr>
+                    <tr><td>Местный</td><td>-быт+а</td><td>ааҕыбыт кинигэттэн</td></tr>
+                    <tr><td>Исходный</td><td>-быт+тан</td><td>ааҕыбыт кинигэттэн</td></tr>
+                </table>
+                
+                <h3>Обособление причастных оборотов</h3>
+                <p>В якутском языке причастный оборот обычно не обособляется запятыми, если он стоит непосредственно перед определяемым словом. Запятые могут ставиться для интонационного выделения или при инверсии.</p>
+                
+                <div class="sentence-example">
+                    <strong>Примеры с обособлением:</strong><br>
+                    Күн тахсыбыт, ыраас салгын сарсыардаҕы күндүтэ. — Взошедшее солнце, чистое утреннее небо.<br>
+                    Ыраахтан көстөр, улахан турар дьиэ. — Издалека виднеющийся, большой стоящий дом.
+                </div>
+                
+                <h3>Причастный оборот с отрицанием</h3>
+                <p>Отрицательные причастные обороты образуются с помощью отрицательного аффикса <strong>-ба</strong>, <strong>-бэ</strong>, <strong>-по</strong>, <strong>-пө</strong>.</p>
+                
+                <table class="grammar-table">
+                    <tr><th>Утвердительное причастие</th><th>Отрицательное причастие</th><th>Перевод</th></tr>
+                    <tr><td>ааҕыбыт (прочитавший)</td><td>ааҕа или ааҕыбатах</td><td>не прочитавший</td></tr>
+                    <tr><td>көрбүт (увидевший)</td><td>көрбөтөҕүнэ, көрбөтөх</td><td>не увидевший</td></tr>
+                    <tr><td>суруйбут (написавший)</td><td>суруйбатах</td><td>не написавший</td></tr>
+                </table>
+                
+                <div class="sentence-example">
+                    <strong>Примеры отрицательных оборотов:</strong><br>
+                    Кинигэни ааҕыбатах оҕо сынньана сытар. — Не прочитавший книгу мальчик отдыхает.<br>
+                    Суруйбатах сурук столга сытар. — Не написанное письмо лежит на столе.
+                </div>
+                
+                <h3>Функции причастных оборотов в предложении</h3>
+                <ul>
+                    <li><strong>Определение:</strong> Ааҕааччы оҕо библиотекаҕа барда. — Читающий мальчик пошёл в библиотеку.</li>
+                    <li><strong>Подлежащее:</strong> Кэлбит киһи кэпсээтэ. — Пришедший человек рассказал.</li>
+                    <li><strong>Дополнение:</strong> Суруйбут суругу аахтым. — Я прочитал написанное письмо.</li>
+                </ul>
+                
+                <h3>Примеры для анализа</h3>
+                <ul>
+                    <li>Күн анныгар олорор киһини билэбин. — Я знаю человека, сидящего под солнцем.</li>
+                    <li>Ыллыыр ырыаны истим. — Я услышал исполняемую песню.</li>
+                    <li>Барбыт суол уһун этэ. — Пройденный путь был длинным.</li>
+                    <li>Кэлиэх айанньыттар кэпсээтилэр. — Прибудет путешественники рассказали.</li>
+                    <li>Көрбүөххэ сөп киинэни көрдүм. — Я посмотрел фильм, который можно посмотреть.</li>
+                    <li>Үөрэнэр оҕолор күрэххэ кыттыыны ыллылар. — Обучающиеся дети приняли участие в конкурсе.</li>
+                    <li>Оҥорбут үлэм сыаналаммата. — Сделанная мной работа не была оценена.</li>
+                </ul>
+                
+                <h3>Важные замечания</h3>
+                <p>Причастные обороты в якутском языке — очень распространённое явление. Они позволяют избегать громоздких придаточных предложений с союзным словом «который». При переводе с русского языка на якутский русские придаточные определительные часто заменяются причастными оборотами. Причастия в обороте согласуются с определяемым словом в падеже и числе.</p>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "7-8";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Какой суффикс используется для образования причастного оборота настоящего времени?", answerKeywords: ["ааччы", "ээччи", "ооччу", "өөччү"], hint: "Суффиксы -ааччы, -ээччи, -ооччу, -өөччү", explanation: "Причастия настоящего времени образуются с помощью суффиксов -ааччы, -ээччи, -ооччу, -өөччү." },
+        { question: "2. Какой суффикс используется для образования причастного оборота прошедшего времени?", answerKeywords: ["быт", "бит", "пыт", "пит"], hint: "Суффиксы -быт, -бит, -пыт, -пит", explanation: "Причастия прошедшего времени образуются с помощью суффиксов -быт, -бит, -пыт, -пит." },
+        { question: "3. Какой суффикс используется для образования причастного оборота будущего времени?", answerKeywords: ["ыах", "иэх", "уох", "үөх"], hint: "Суффиксы -ыах, -иэх, -уох, -үөх", explanation: "Причастия будущего времени образуются с помощью суффиксов -ыах, -иэх, -уох, -үөх." },
+        { question: "4. Переведите на русский язык: 'Ааҕааччы оҕолор библиотекаҕа сылдьаллар.'", answerKeywords: ["читающие дети ходят в библиотеку"], hint: "Ааҕааччы — читающие, оҕолор — дети, библиотекаҕа — в библиотеку, сылдьаллар — ходят", explanation: "Читающие дети ходят в библиотеку." },
+        { question: "5. Переведите на якутский язык: 'Написанное письмо лежит на столе.'", answerKeywords: ["суруйбут", "сурук", "столга", "сытар"], hint: "Используйте причастие прошедшего времени от глагола 'суруй'", explanation: "Суруйбут сурук столга сытар." },
+        { question: "6. Переведите на русский язык: 'Көрбүт киинэм интэриэһинэй этэ.'", answerKeywords: ["увиденный мной фильм был интересным"], hint: "Көрбүт — увиденный, киинэм — мой фильм, интэриэһинэй этэ — был интересным", explanation: "Увиденный мной фильм был интересным." },
+        { question: "7. Переведите на якутский язык: 'Гости, которые придут, сядут здесь.'", answerKeywords: ["кэлиэх", "ыалдьыттар", "манна", "олоруохтара"], hint: "Используйте причастие будущего времени от глагола 'кэл'", explanation: "Кэлиэх ыалдьыттар манна олоруохтара." },
+        { question: "8. Образуйте отрицательный причастный оборот от глагола 'аах' (читать) в прошедшем времени.", answerKeywords: ["ааҕыбатах", "ааҕа или"], hint: "Отрицательный аффикс -ба + причастный суффикс", explanation: "Ааҕыбатах (не прочитавший)." },
+        { question: "9. Составьте предложение на якутском языке с причастным оборотом прошедшего времени.", answerKeywords: ["быт", "причастие"], hint: "Используйте причастие на -быт или -бит", explanation: "Пример: Мин көрбүт киинэм интэриэһинэй. (Увиденный мной фильм интересный.)" },
+        { question: "10. Напишите три суффикса причастий для разных времён с примерами.", answerKeywords: ["ааччы", "быт", "ыах"], hint: "Настоящее, прошедшее, будущее время", explanation: "1) -ааччы (ааҕааччы — читающий); 2) -быт (көрбүт — увидевший); 3) -ыах (кэлиэх — тот, кто придёт)." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    
+    function loadProgress() { 
+        try { 
+            const saved = localStorage.getItem(`lesson_${lessonId}_progress`); 
+            if (saved) { 
+                const data = JSON.parse(saved); 
+                exercisesCompleted = data.completed; 
+                lessonPassed = data.passed; 
+            } 
+        } catch(e) {} 
+        try { 
+            const saved = localStorage.getItem('yakut_lessons_done'); 
+            if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; 
+        } catch(e) {} 
+        updateUI(); 
+    }
+    
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) progressFill.style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; 
+                try { 
+                    const s = localStorage.getItem('yakut_lessons_done'); 
+                    if (s) stored = JSON.parse(s); 
+                } catch(e) {}
+                if (!stored.includes(lessonId)) { 
+                    stored.push(lessonId); 
+                    localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); 
+                }
+            }
+            if (status) {
+                status.innerHTML = 'Пройдено (' + count + '/10)';
+                status.className = 'status-badge status-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'inline-block';
+        } else { 
+            if (status) {
+                status.innerHTML = 'Не пройдено (' + count + '/10)';
+                status.className = 'status-badge status-not-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'none';
+        }
+        saveProgress();
+    }
+    
+    function normalizeAnswer(str) {
+        if (!str) return '';
+        return str.toLowerCase()
+            .replace(/[ъь]/g, '')
+            .replace(/[^\wа-яёөүҥһ]/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+    
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const normalizedAnswer = normalizeAnswer(answer);
+        let isCorrect = false;
+        
+        if (idx === 9) {
+            const hasPastPrt = normalizedAnswer.includes("быт") || normalizedAnswer.includes("бит");
+            isCorrect = hasPastPrt;
+        } else if (idx === 8) {
+            const hasAagybatakh = normalizedAnswer.includes("ааҕыбатах");
+            isCorrect = hasAagybatakh;
+        } else if (idx === 7) {
+            const hasKelie = normalizedAnswer.includes("кэлиэх");
+            const hasYaldyt = normalizedAnswer.includes("ыалдьыттар");
+            isCorrect = (hasKelie && hasYaldyt);
+        } else if (idx === 6) {
+            const hasKorbUt = normalizedAnswer.includes("көрбүт");
+            const hasInteres = normalizedAnswer.includes("интэриэһинэй");
+            isCorrect = (hasKorbUt && hasInteres);
+        } else if (idx === 5) {
+            const hasSuruybut = normalizedAnswer.includes("суруйбут");
+            const hasSuruk = normalizedAnswer.includes("сурук");
+            const hasStolga = normalizedAnswer.includes("столга");
+            isCorrect = (hasSuruybut && hasSuruk && hasStolga);
+        } else if (idx === 4) {
+            const hasAaghat = normalizedAnswer.includes("ааҕааччы");
+            const hasOgo = normalizedAnswer.includes("оҕолор");
+            isCorrect = (hasAaghat && hasOgo);
+        } else {
+            const allKeywordsPresent = ex.answerKeywords.every(keyword => 
+                normalizedAnswer.includes(keyword.toLowerCase())
+            );
+            isCorrect = allKeywordsPresent;
+        }
+        
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { 
+            exercisesCompleted[idx] = true; 
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Верно. ' + (ex.explanation || '');
+                resultDiv.className = 'ex-result correct';
+            }
+        } else { 
+            exercisesCompleted[idx] = false;
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Неверно. ' + (ex.hint || 'Попробуйте ещё раз, сверьтесь с лекцией.');
+                resultDiv.className = 'ex-result incorrect';
+            }
+        }
+        updateUI(); 
+        saveProgress();
+    }
+    
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); 
+            div.className = 'exercise';
+            div.innerHTML = '<h3>Упражнение ' + (idx+1) + '</h3><p>' + ex.question + '</p><textarea id="ex-input-' + idx + '" rows="3" placeholder="Введите ваш ответ на якутском языке..."></textarea><button class="check-btn" onclick="checkExercise(' + idx + ', document.getElementById(\'ex-input-' + idx + '\').value)">Проверить</button><div id="ex-result-' + idx + '" class="ex-result"></div>';
+            if (exercisesCompleted[idx]) { 
+                const resultDiv = div.querySelector('#ex-result-' + idx);
+                if (resultDiv) {
+                    resultDiv.innerHTML = 'Выполнено. ' + (ex.explanation || '');
+                    resultDiv.className = 'ex-result correct';
+                }
+            }
+            container.appendChild(div);
+        });
+    }
+    
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока? Все ваши ответы будут удалены.')) {
+            exercisesCompleted.fill(false); 
+            lessonPassed = false;
+            let stored = []; 
+            try { 
+                const s = localStorage.getItem('yakut_lessons_done'); 
+                if (s) stored = JSON.parse(s); 
+            } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); 
+            updateUI(); 
+            alert('Прогресс урока сброшен.');
+        }
+    }
+    
+    function init() {
+        loadProgress(); 
+        renderExercises(); 
+        updateUI();
+        const resetBtn = document.getElementById('resetLessonBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (resetBtn) resetBtn.onclick = resetLesson;
+        if (prevBtn) prevBtn.onclick = () => window.location.href = 'lesson-7-7.html';
+        if (nextBtn) nextBtn.onclick = () => window.location.href = 'lesson-7-9.html';
+    }
+    
+    document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 7-13 | Фразеологизмы | Саха тыла</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .lecture-section table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 15px; overflow: hidden; }
+        .lecture-section th, .lecture-section td { border: 1px solid #d4e6c3; padding: 8px 12px; text-align: left; vertical-align: top; }
+        .lecture-section th { background: #e8f5e9; color: #2e6b3e; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        .grammar-table { width: 100%; margin: 15px 0; }
+        .grammar-table td { padding: 8px; }
+        .note-box { background: #e3f2fd; border-radius: 16px; padding: 15px; margin: 15px 0; border-left: 4px solid #1976d2; font-size: 0.95rem; }
+        .sentence-example { background: #fff8e1; padding: 10px 15px; border-radius: 16px; margin: 10px 0; border-left: 4px solid #dba334; }
+        .phrase-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; margin: 15px 0; }
+        .phrase-card { background: white; border-radius: 16px; padding: 12px 15px; border: 1px solid #d4e6c3; }
+        .phrase-sah { font-weight: bold; color: #2a6e3a; }
+        .phrase-ru { color: #5a7a5a; font-size: 0.9rem; margin-top: 5px; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 7-13: Фразеологизмы</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Фразеологизмы в якутском языке</h3>
+                <p>Фразеологизмы — это устойчивые сочетания слов, которые имеют переносное значение и не создаются заново в речи, а воспроизводятся как готовые единицы. В якутском языке фразеологизмы широко используются в устной речи, литературе и фольклоре, придавая высказыванию образность, выразительность и эмоциональность.</p>
+                
+                <div class="note-box">
+                    Важно: Фразеологизмы нельзя понимать буквально. Их значение часто не вытекает из значений отдельных слов, входящих в состав оборота.
+                </div>
+                
+                <h3>Фразеологизмы, связанные с частями тела</h3>
+                <div class="phrase-list">
+                    <div class="phrase-card"><span class="phrase-sah">Баһа быстыбыт</span><div class="phrase-ru">Букв: голова отрезалась — очень испугаться</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Хараҕа түстэ</span><div class="phrase-ru">Букв: глаз упал — сильно захотеть, позариться</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Кулгааҕа сатаан</span><div class="phrase-ru">Букв: на ухо ловко — внимательно слушать</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Айаҕа кэлбэт</span><div class="phrase-ru">Букв: в рот не идёт — невкусно, невозможно съесть</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Тыла быстыбыт</span><div class="phrase-ru">Букв: язык отрезался — лишиться дара речи, замолчать</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Иэдэһэ буолбут</span><div class="phrase-ru">Букв: стал щекой — надоесть, опостылеть</div></div>
+                </div>
+                
+                <h3>Фразеологизмы, связанные с животными</h3>
+                <div class="phrase-list">
+                    <div class="phrase-card"><span class="phrase-sah">Куобах курдук</span><div class="phrase-ru">Букв: как заяц — очень быстро, стремительно</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Саха биир улахан балыктаах күөлэ</span><div class="phrase-ru">Букв: как большое озеро с рыбой — очень богатый</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Кыыл курдук</span><div class="phrase-ru">Букв: как зверь — очень сильно, безудержно</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Уу чуораан</span><div class="phrase-ru">Букв: водяная сорока — болтливый человек</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Хотой курдук</span><div class="phrase-ru">Букв: как орёл — смелый, гордый, сильный</div></div>
+                </div>
+                
+                <h3>Фразеологизмы, связанные с природой и погодой</h3>
+                <div class="phrase-list">
+                    <div class="phrase-card"><span class="phrase-sah">Күн эрдэ</span><div class="phrase-ru">Букв: до солнца — очень рано</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Күн сирэ</span><div class="phrase-ru">Букв: солнечное место — красивый вид, благодать</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Сылаас тыал</span><div class="phrase-ru">Букв: тёплый ветер — приятная весть</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Хараҥа түүнэ</span><div class="phrase-ru">Букв: тёмная ночь — очень темно, не видно ничего</div></div>
+                </div>
+                
+                <h3>Фразеологизмы со значением «быстро»</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Якутский фразеологизм</th><th>Буквальный перевод</th><th>Значение</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>кырыс гына</th>
+                        <td>звукоподражание</th>
+                        <td>мгновенно, моментально</th>
+                        </tr>
+                        <tr>
+  
+——</th>
+                        <td>чабыс гына</th>
+                        <td>звукоподражание</th>
+                        <td>быстро-быстро</th>
+                        </tr>
+                        <tr>
+  
+——</th>
+                        <td>сир гына</th>
+                        <td>звукоподражание</th>
+                         Advancesмигом, быстро</th>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Фразеологизмы со значением «много»</h3>
+                <div class="phrase-list">
+                    <div class="phrase-card"><span class="phrase-sah">Бэрт элбэх</span><div class="phrase-ru">очень много</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Муҥура суох</span><div class="phrase-ru">безгранично, бесконечно много</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Быыһа-баайа суох</span><div class="phrase-ru">несметное количество</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Эмиэ да элбэх</span><div class="phrase-ru">довольно много, достаточно много</div></div>
+                </div>
+                
+                <h3>Фразеологизмы со значением «мало»</h3>
+                <div class="phrase-list">
+                    <div class="phrase-card"><span class="phrase-sah">Аҕыйах ахсааннаах</span><div class="phrase-ru">малочисленный</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Былыргы кэм</span><div class="phrase-ru">в давние времена, очень мало</div></div>
+                    <div class="phrase-card"><span class="phrase-sah">Туох эрэ кыра</span><div class="phrase-ru">что-то очень маленькое, незначительное</div></div>
+                </div>
+                
+                <h3>Фразеологизмы из эпоса Олонхо</h3>
+                <div class="sentence-example">
+                    <strong>Примеры фразеологизмов из Олонхо:</strong><br>
+                    «Айыы аймах, айыылар төрүттэрэ» — Божественные люди, происхождение божеств.<br>
+                    «Уот сүүрэр сирэй» — Огненный лик (быстрый, неудержимый).<br>
+                    «Халлаан хабарҕата» — Небесный хребет (бескрайняя даль).<br>
+                    «Күн уонна ый ууһа» — Потомок солнца и луны (благородного происхождения).
+                </div>
+                
+                <h3>Примеры фразеологизмов в предложениях</h3>
+                <ul>
+                    <li><strong>Баһа быстыбыт.</strong> — Очень испугался. (Букв: голова отрезалась)</li>
+                    <li><strong>Хараҕа түстэ.</strong> — Сильно захотел, позарился. (Букв: глаз упал)</li>
+                    <li><strong>Айаҕа кэлбэт.</strong> — Невкусно, в рот не лезет. (Букв: в рот не идёт)</li>
+                    <li><strong>Куобах курдук сүүрдэ.</strong> — Побежал очень быстро. (Букв: как заяц побежал)</li>
+                    <li><strong>Кырыс гына кэллэ.</strong> — Мгновенно пришёл. (Букв: мгновенно пришёл)</li>
+                    <li><strong>Бэрт элбэх кинигэни аахтым.</strong> — Очень много книг прочитал.</li>
+                    <li><strong>Муҥура суох үөрэнэмин.</strong> — Учусь безгранично много.</li>
+                    <li><strong>Уу чуораан саҥарда.</strong> — Болтливый человек заговорил.</li>
+                </ul>
+                
+                <h3>Таблица самых употребительных фразеологизмов</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Якутский фразеологизм</th><th>Значение</th><th>Пример</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+  
+——</th>
+                        <td>Хараҕын таптаа</th>
+                        <td>Беречь как зеницу ока</th>
+                        <td>Хараҕын таптаа оҕолору.</th>
+                        </tr>
+                        <tr>
+<td>Айаҕын аппаабата</th>
+                        <td>В рот не возьмёшь</th>
+                        <td>Аһа айаҕын аппаабата.</th>
+                        </tr>
+                        <tr>
+<td>Иэдэһэ буолан</th>
+                        <td>Надоев, опостылев</th>
+                        <td>Иэдэһэ буолан кэллэ.</th>
+                        </tr>
+                        <tr>
+<td>Куобах курдук</th>
+                        <td>Очень быстро</th>
+                        <td>Куобах курдук сүүрбүт.</th>
+                        </tr>
+                        <tr>
+<td>Күн эрдэ</th>
+                        <td>Очень рано</th>
+                        <td>Күн эрдэ турбуппун.</th>
+                        </tr>
+                        <tr>
+<td>Тыла быстыбыт</th>
+                        <td>Лишиться дара речи</th>
+                        <td>Көрөн, тыла быстыбыт.</th>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Важные замечания</h3>
+                <p>Фразеологизмы являются важной частью якутского языка. Они отражают культуру, обычаи и мировоззрение народа. При переводе фразеологизмов на другие языки часто требуется не дословный перевод, а поиск эквивалента, передающего тот же смысл. Употребление фразеологизмов делает речь более яркой, образной и выразительной, поэтому их нужно изучать и активно использовать в речи.</p>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "7-13";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Что такое фразеологизм?", answerKeywords: ["устойчивое сочетание", "переносное значение", "готовая единица"], hint: "Устойчивое сочетание слов с переносным значением", explanation: "Фразеологизм — это устойчивое сочетание слов, имеющее переносное значение и воспроизводящееся как готовая единица." },
+        { question: "2. Объясните значение фразеологизма 'баһа быстыбыт'.", answerKeywords: ["очень испугаться", "испуг"], hint: "Буквально: голова отрезалась", explanation: "Очень испугаться, сильно перепугаться." },
+        { question: "3. Объясните значение фразеологизма 'хараҕа түстэ'.", answerKeywords: ["сильно захотеть", "позариться"], hint: "Буквально: глаз упал", explanation: "Сильно захотеть, позариться на что-либо." },
+        { question: "4. Объясните значение фразеологизма 'куобах курдук'.", answerKeywords: ["очень быстро", "быстро"], hint: "Буквально: как заяц", explanation: "Очень быстро, стремительно." },
+        { question: "5. Как переводится фразеологизм 'айаҕа кэлбэт'?", answerKeywords: ["невкусно", "в рот не лезет"], hint: "Буквально: в рот не идёт", explanation: "Невкусно, невозможно есть, в рот не лезет." },
+        { question: "6. Переведите на русский язык предложение: 'Куобах курдук сүүрдэ.'", answerKeywords: ["побежал очень быстро"], hint: "Куобах — заяц, курдук — как, сүүрдэ — побежал", explanation: "Побежал очень быстро (как заяц)." },
+        { question: "7. Составьте предложение на якутском языке с фразеологизмом 'баһа быстыбыт'.", answerKeywords: ["баһа быстыбыт"], hint: "Используйте фразеологизм в значении 'очень испугаться'", explanation: "Пример: Медведи көрөн, баһа быстыбыт. (Увидев медведя, очень испугался.)" },
+        { question: "8. Составьте предложение на якутском языке с фразеологизмом 'куобах курдук'.", answerKeywords: ["куобах курдук"], hint: "Используйте фразеологизм в значении 'быстро'", explanation: "Пример: Кини куобах курдук сүүрдэ. (Он побежал очень быстро.)" },
+        { question: "9. Подберите якутский фразеологизм к русскому 'очень быстро'.", answerKeywords: ["куобах курдук", "кырыс гына", "чабыс гына", "сир гына"], hint: "Фразеологизмы со значением быстроты", explanation: "Куобах курдук, кырыс гына, чабыс гына, сир гына." },
+        { question: "10. Напишите три якутских фразеологизма с их значением на русском языке.", answerKeywords: ["баһа быстыбыт", "хараҕа түстэ", "куобах курдук", "айаҕа кэлбэт", "тыла быстыбыт"], hint: "Любые три из изученных", explanation: "1) баһа быстыбыт — очень испугаться; 2) хараҕа түстэ — сильно захотеть; 3) куобах курдук — очень быстро." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    
+    function loadProgress() { 
+        try { 
+            const saved = localStorage.getItem(`lesson_${lessonId}_progress`); 
+            if (saved) { 
+                const data = JSON.parse(saved); 
+                exercisesCompleted = data.completed; 
+                lessonPassed = data.passed; 
+            } 
+        } catch(e) {} 
+        try { 
+            const saved = localStorage.getItem('yakut_lessons_done'); 
+            if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; 
+        } catch(e) {} 
+        updateUI(); 
+    }
+    
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) progressFill.style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; 
+                try { 
+                    const s = localStorage.getItem('yakut_lessons_done'); 
+                    if (s) stored = JSON.parse(s); 
+                } catch(e) {}
+                if (!stored.includes(lessonId)) { 
+                    stored.push(lessonId); 
+                    localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); 
+                }
+            }
+            if (status) {
+                status.innerHTML = 'Пройдено (' + count + '/10)';
+                status.className = 'status-badge status-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'inline-block';
+        } else { 
+            if (status) {
+                status.innerHTML = 'Не пройдено (' + count + '/10)';
+                status.className = 'status-badge status-not-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'none';
+        }
+        saveProgress();
+    }
+    
+    function normalizeAnswer(str) {
+        if (!str) return '';
+        return str.toLowerCase()
+            .replace(/[ъь]/g, '')
+            .replace(/[^\wа-яёөүҥһ]/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+    
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const normalizedAnswer = normalizeAnswer(answer);
+        let isCorrect = false;
+        
+        if (idx === 9) {
+            let foundCount = 0;
+            const correctWords = ["баһа быстыбыт", "хараҕа түстэ", "куобах курдук", "айаҕа кэлбэт", "тыла быстыбыт", "кырыс", "чабыс", "сир"];
+            const answerLower = normalizedAnswer;
+            for (let word of correctWords) {
+                if (answerLower.includes(word.toLowerCase())) {
+                    foundCount++;
+                }
+            }
+            isCorrect = foundCount >= 2;
+        } else if (idx === 8) {
+            const hasKuobakh = normalizedAnswer.includes("куобах курдук");
+            const hasKyrys = normalizedAnswer.includes("кырыс гына");
+            const hasChabys = normalizedAnswer.includes("чабыс гына");
+            isCorrect = (hasKuobakh || hasKyrys || hasChabys);
+        } else if (idx === 7) {
+            const hasKuobakh = normalizedAnswer.includes("куобах курдук");
+            const hasSuurde = normalizedAnswer.includes("сүүрдэ");
+            isCorrect = (hasKuobakh && hasSuurde);
+        } else if (idx === 6) {
+            const hasBaha = normalizedAnswer.includes("баһа быстыбыт");
+            isCorrect = hasBaha;
+        } else if (idx === 5) {
+            const hasSuurde = normalizedAnswer.includes("сүүрдэ");
+            const hasKuobakh = normalizedAnswer.includes("куобах");
+            isCorrect = (hasSuurde && hasKuobakh);
+        } else {
+            const allKeywordsPresent = ex.answerKeywords.every(keyword => 
+                normalizedAnswer.includes(keyword.toLowerCase())
+            );
+            isCorrect = allKeywordsPresent;
+        }
+        
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { 
+            exercisesCompleted[idx] = true; 
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Верно. ' + (ex.explanation || '');
+                resultDiv.className = 'ex-result correct';
+            }
+        } else { 
+            exercisesCompleted[idx] = false;
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Неверно. ' + (ex.hint || 'Попробуйте ещё раз, сверьтесь с лекцией.');
+                resultDiv.className = 'ex-result incorrect';
+            }
+        }
+        updateUI(); 
+        saveProgress();
+    }
+    
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); 
+            div.className = 'exercise';
+            div.innerHTML = '<h3>Упражнение ' + (idx+1) + '</h3><p>' + ex.question + '</p><textarea id="ex-input-' + idx + '" rows="3" placeholder="Введите ваш ответ..."></textarea><button class="check-btn" onclick="checkExercise(' + idx + ', document.getElementById(\'ex-input-' + idx + '\').value)">Проверить</button><div id="ex-result-' + idx + '" class="ex-result"></div>';
+            if (exercisesCompleted[idx]) { 
+                const resultDiv = div.querySelector('#ex-result-' + idx);
+                if (resultDiv) {
+                    resultDiv.innerHTML = 'Выполнено. ' + (ex.explanation || '');
+                    resultDiv.className = 'ex-result correct';
+                }
+            }
+            container.appendChild(div);
+        });
+    }
+    
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока? Все ваши ответы будут удалены.')) {
+            exercisesCompleted.fill(false); 
+            lessonPassed = false;
+            let stored = []; 
+            try { 
+                const s = localStorage.getItem('yakut_lessons_done'); 
+                if (s) stored = JSON.parse(s); 
+            } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); 
+            updateUI(); 
+            alert('Прогресс урока сброшен.');
+        }
+    }
+    
+    function init() {
+        loadProgress(); 
+        renderExercises(); 
+        updateUI();
+        const resetBtn = document.getElementById('resetLessonBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (resetBtn) resetBtn.onclick = resetLesson;
+        if (prevBtn) prevBtn.onclick = () => window.location.href = 'lesson-7-12.html';
+        if (nextBtn) nextBtn.onclick = () => window.location.href = 'lesson-7-14.html';
+    }
+    
+    document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

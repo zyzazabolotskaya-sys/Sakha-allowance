@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 7-18 | Национальные праздники | Саха тыла</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .lecture-section table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 15px; overflow: hidden; }
+        .lecture-section th, .lecture-section td { border: 1px solid #d4e6c3; padding: 8px 12px; text-align: left; vertical-align: top; }
+        .lecture-section th { background: #e8f5e9; color: #2e6b3e; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        .grammar-table { width: 100%; margin: 15px 0; }
+        .grammar-table td { padding: 8px; }
+        .note-box { background: #e3f2fd; border-radius: 16px; padding: 15px; margin: 15px 0; border-left: 4px solid #1976d2; font-size: 0.95rem; }
+        .sentence-example { background: #fff8e1; padding: 10px 15px; border-radius: 16px; margin: 10px 0; border-left: 4px solid #dba334; }
+        .holiday-card { background: white; border-radius: 16px; padding: 15px; margin: 15px 0; border: 1px solid #d4e6c3; }
+        .holiday-title { font-weight: bold; color: #2a6e3a; font-size: 1.1rem; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 7-18: Национальные праздники</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Национальные праздники якутского народа</h3>
+                <p>Национальные праздники занимают важное место в культуре якутского народа. Они связаны с природными циклами, хозяйственной деятельностью, историческими событиями и духовными верованиями. Праздники сопровождаются ритуалами, песнями, танцами, спортивными состязаниями и обильным угощением.</p>
+                
+                <div class="note-box">
+                    Важно: Многие якутские праздники имеют глубокие исторические корни и продолжают отмечаться в современной Якутии, способствуя сохранению культурного наследия.
+                </div>
+                
+                <h3>Ысыах — главный праздник саха</h3>
+                <div class="holiday-card">
+                    <div class="holiday-title">Ысыах (Исях) — встреча лета</div>
+                    <p><strong>Время проведения:</strong> 21-22 июня (день летнего солнцестояния)</p>
+                    <p><strong>Основные обряды:</strong> кумысопитие, кормление огня и духов, хоровод осуохай, благословение алгыс, спортивные состязания (борьба хапсагай, прыжки, перетягивание палки).</p>
+                    <p><strong>Символы:</strong> сэргэ (коновязь), салама (ленты), чорон (кумысная чаша)</p>
+                    <p><strong>Значение:</strong> обновление природы и человека, плодородие, очищение, единение с духами.</p>
+                </div>
+                
+                <h3>Праздник кумыса</h3>
+                <div class="sentence-example">
+                    Праздник кумыса — часть Ысыаха, посвящённая национальному напитку кумыс. Проводится в дни, когда кобылы дают первое молоко. Ритуал начинается с окропления земли и огня кумысом, затем алгысчыт произносит благословение, после чего все участники пьют кумыс из чороонов. Праздник сопровождается песнями, танцами и скачками.
+                </div>
+                
+                <h3>День оленевода</h3>
+                <div class="holiday-card">
+                    <div class="holiday-title">День оленевода — Баһылык күнэ</div>
+                    <p><strong>Время проведения:</strong> весной (март-апрель)</p>
+                    <p><strong>Где проводится:</strong> в северных и арктических районах Якутии</p>
+                    <p><strong>Основные события:</strong> гонки на оленьих упряжках, метание маута (аркана), разделка туши оленя, дегустация блюд из оленины, концерты, ярмарки.</p>
+                    <p><strong>Значение:</strong> сохранение традиций оленеводства, почитание труда оленеводов.</p>
+                </div>
+                
+                <h3>Праздник первой рыбы</h3>
+                <div class="sentence-example">
+                    Праздник первой рыбы (Балык ыһыаҕа) отмечается весной, когда реки вскрываются ото льда и начинается рыболовный сезон. Рыбаки выходят на промысел, первую пойманную рыбу варят и угощают всех соседей и родственников. Считается, что этот ритуал приносит удачу на весь рыболовный сезон.
+                </div>
+                
+                <h3>Праздник первой кукушки</h3>
+                <div class="holiday-card">
+                    <div class="holiday-title">Күкүүк ыһыаҕа — праздник первой кукушки</div>
+                    <p><strong>Время проведения:</strong> конец мая — начало июня</p>
+                    <p><strong>Обряды:</strong> когда услышат первую кукушку, загадывают желание, бросают монеты, совершают окуривание. Считается, что кукушка приносит весть о приходе лета.</p>
+                    <p><strong>Значение:</strong> определение начала летнего сезона, прогнозирование погоды и урожая.</p>
+                </div>
+                
+                <h3>Свадебные обряды и праздники</h3>
+                <ul>
+                    <li><strong>Кудаанньа</strong> — сватовство. Сваты приезжают в дом невесты с подарками и угощением.</li>
+                    <li><strong>Суол аһа</strong> — угощение дороги. Обряд, обеспечивающий счастливую дорогу молодожёнов.</li>
+                    <li><strong>Тойуу</strong> — свадебный пир. Готовят много угощений, поют песни, танцуют осуохай.</li>
+                    <li><strong>Хонук</strong> — послесвадебный обряд, когда невеста знакомится с домашним хозяйством.</li>
+                </ul>
+                
+                <h3>Детские праздники</h3>
+                <div class="sentence-example">
+                    <strong>Кун Күнүгэр</strong> — праздник, посвящённый детям. Проводится летом. Дети участвуют в играх, соревнованиях, получают подарки. Этот праздник символизирует будущее народа и заботу о подрастающем поколении.
+                </div>
+                
+                <h3>Календарные праздники</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Праздник</th><th>Время</th><th>Значение</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+  
+——</th>
+                        <td>Күн ыһыаҕа</th>
+                        <td>Зимнее солнцестояние (декабрь)</th>
+                        <td>Встреча поворота солнца на лето</th>
+                        </tr>
+                        <tr>
+。——</th>
+                        <td>Туймаада ыһыаҕа</th>
+                        <td>Начало лета</th>
+                        <td>Городской Ысыах в Якутске</th>
+                        </tr>
+                        <tr>
+。——</th>
+                        <td>Хотугу ыһыах</th>
+                        <td>Середина лета</th>
+                        <td>Северный Ысыах в арктических районах</th>
+                        </tr>
+                        <tr>
+。——</th>
+                        <td>Кыһын ыһыах</th>
+                        <td>Зимний праздник</th>
+                        <td>Игры на снегу, лошадиные скачки</th>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Спортивные традиции на праздниках</h3>
+                <ul>
+                    <li><strong>Хапсаҕай</strong> — национальная борьба на поясах. Победитель получает звание баатыра (богатыря).</li>
+                    <li><strong>Кылыы</strong> — прыжки на одной ноге.</li>
+                    <li><strong>Ыстанга</strong> — прыжки на обеих ногах.</li>
+                    <li><strong>Куобах</strong> — бег с препятствиями.</li>
+                    <li><strong>Мас тардыһыыта</strong> — перетягивание палки.</li>
+                    <li><strong>Ат сүүрдүүтэ</strong> — лошадиные скачки.</li>
+                </ul>
+                
+                <h3>Музыкальное сопровождение праздников</h3>
+                <div class="sentence-example">
+                    На праздниках звучат народные песни, играют на хомусе (варгане), поют тойук (горловое пение). Обязательным элементом является осуохай — хоровод, в котором участники круга двигаются по солнцу и поют ритмичные песни. Осуохай может длиться несколько часов без остановки.
+                </div>
+                
+                <h3>Современные национальные праздники</h3>
+                <div class="holiday-card">
+                    <div class="holiday-title">Возрождение традиций</div>
+                    <p>В современной Якутии национальные праздники активно возрождаются. Ежегодно проводятся:</p>
+                    <ul>
+                        <li>Ысыах Туймаады в г. Якутске — самый масштабный праздник, собирающий десятки тысяч людей.</li>
+                        <li>Ысыах Олонхо — фестиваль, посвящённый эпическому наследию.</li>
+                        <li>День республики (27 сентября) — государственный праздник Якутии.</li>
+                        <li>День родного языка и письменности (13 февраля).</li>
+                    </ul>
+                </div>
+                
+                <h3>Пословицы о праздниках</h3>
+                <ul>
+                    <li>Ыһыахха ыһыахтаах, үөрүүлээххэ үөрүүлээх. — На Ысыахе веселье, на радости — радость.</li>
+                    <li>Ыһыахха киирбит киһи ыһыаҕы кэпсиир. — Побывавший на Ысыахе расскажет про Ысыах.</li>
+                    <li>Тойууга тойон буол, сэрэммит киһи буол. — На пиру будь хозяином, будь осторожным человеком.</li>
+                </ul>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "7-18";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Как называется главный национальный праздник якутов, посвящённый встрече лета?", answerKeywords: ["ысыах"], hint: "День летнего солнцестояния", explanation: "Ысыах — главный национальный праздник." },
+        { question: "2. В какой день отмечается Ысыах?", answerKeywords: ["21-22 июня", "день летнего солнцестояния"], hint: "Самый длинный день в году", explanation: "Ысыах отмечается 21-22 июня, в день летнего солнцестояния." },
+        { question: "3. Как называется якутская национальная борьба на поясах?", answerKeywords: ["хапсагай", "хапсаҕай"], hint: "Борьба", explanation: "Хапсагай — национальная борьба на поясах." },
+        { question: "4. Как называется якутский хороводный танец-песня, исполняемый на Ысыахе?", answerKeywords: ["осуохай", "оһуохай"], hint: "Круговой танец", explanation: "Оһуохай (осуохай) — хороводный танец-песня." },
+        { question: "5. Как называется ритуальная кумысная чаша?", answerKeywords: ["чорон"], hint: "Национальный сосуд", explanation: "Чорон — кумысная чаша." },
+        { question: "6. Переведите на русский язык: 'Ыһыахха киирбит киһи ыһыаҕы кэпсиир.'", answerKeywords: ["побывавший на ысыахе расскажет про ысыах"], hint: "Киирбит — вошедший, побывавший", explanation: "Побывавший на Ысыахе расскажет про Ысыах." },
+        { question: "7. Переведите на якутский язык: 'На Ысыахе веселье, на радости — радость.'", answerKeywords: ["ыһыахха ыһыахтаах", "үөрүүлээххэ үөрүүлээх"], hint: "Пословица из лекции", explanation: "Ыһыахха ыһыахтаах, үөрүүлээххэ үөрүүлээх." },
+        { question: "8. Назовите три вида спортивных состязаний на Ысыахе.", answerKeywords: ["хапсагай", "кылыы", "ыстанга", "куобах", "мас тардыһыыта"], hint: "Борьба, прыжки, перетягивание", explanation: "1) Хапсагай; 2) Кылыы; 3) Ыстанга; 4) Куобах; 5) Мас тардыһыыта." },
+        { question: "9. Как называется праздник оленеводов в Якутии?", answerKeywords: ["день оленевода", "баһылык күнэ"], hint: "Отмечается весной на севере", explanation: "День оленевода (Баһылык күнэ)." },
+        { question: "10. Напишите три традиционных блюда, которые готовят на якутские праздники.", answerKeywords: ["кумыс", "саламат", "хаан", "кёрчех", "строганина"], hint: "Напиток, каша, колбаса, сливки", explanation: "1) Кумыс; 2) Саламат; 3) Хаан; 4) Кёрчех; 5) Строганина." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    
+    function loadProgress() { 
+        try { 
+            const saved = localStorage.getItem(`lesson_${lessonId}_progress`); 
+            if (saved) { 
+                const data = JSON.parse(saved); 
+                exercisesCompleted = data.completed; 
+                lessonPassed = data.passed; 
+            } 
+        } catch(e) {} 
+        try { 
+            const saved = localStorage.getItem('yakut_lessons_done'); 
+            if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; 
+        } catch(e) {} 
+        updateUI(); 
+    }
+    
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) progressFill.style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; 
+                try { 
+                    const s = localStorage.getItem('yakut_lessons_done'); 
+                    if (s) stored = JSON.parse(s); 
+                } catch(e) {}
+                if (!stored.includes(lessonId)) { 
+                    stored.push(lessonId); 
+                    localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); 
+                }
+            }
+            if (status) {
+                status.innerHTML = 'Пройдено (' + count + '/10)';
+                status.className = 'status-badge status-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'inline-block';
+        } else { 
+            if (status) {
+                status.innerHTML = 'Не пройдено (' + count + '/10)';
+                status.className = 'status-badge status-not-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'none';
+        }
+        saveProgress();
+    }
+    
+    function normalizeAnswer(str) {
+        if (!str) return '';
+        return str.toLowerCase()
+            .replace(/[ъь]/g, '')
+            .replace(/[^\wа-яёөүҥһ]/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+    
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const normalizedAnswer = normalizeAnswer(answer);
+        let isCorrect = false;
+        
+        if (idx === 9) {
+            let foundCount = 0;
+            const dishes = ["кумыс", "саламат", "хаан", "кёрчех", "строганина", "керчех"];
+            for (let d of dishes) {
+                if (normalizedAnswer.includes(d)) foundCount++;
+            }
+            isCorrect = foundCount >= 2;
+        } else if (idx === 8) {
+            const hasDenOlen = normalizedAnswer.includes("оленевод") || normalizedAnswer.includes("баһылык");
+            isCorrect = hasDenOlen;
+        } else if (idx === 7) {
+            let foundCount = 0;
+            const sports = ["хапсагай", "кылыы", "ыстанга", "куобах", "мас тардыһыыта", "мас тардыhыыта"];
+            for (let s of sports) {
+                if (normalizedAnswer.includes(s)) foundCount++;
+            }
+            isCorrect = foundCount >= 2;
+        } else if (idx === 6) {
+            const hasYhya = normalizedAnswer.includes("ыһыахха") || normalizedAnswer.includes("ыһыахтаах");
+            const hasUryu = normalizedAnswer.includes("үөрүүлээххэ") || normalizedAnswer.includes("үөрүүлээх");
+            isCorrect = (hasYhya && hasUryu);
+        } else if (idx === 5) {
+            const hasKibir = normalizedAnswer.includes("киирбит");
+            isCorrect = hasKibir;
+        } else {
+            const allKeywordsPresent = ex.answerKeywords.every(keyword => 
+                normalizedAnswer.includes(keyword.toLowerCase())
+            );
+            isCorrect = allKeywordsPresent;
+        }
+        
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { 
+            exercisesCompleted[idx] = true; 
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Верно. ' + (ex.explanation || '');
+                resultDiv.className = 'ex-result correct';
+            }
+        } else { 
+            exercisesCompleted[idx] = false;
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Неверно. ' + (ex.hint || 'Попробуйте ещё раз, сверьтесь с лекцией.');
+                resultDiv.className = 'ex-result incorrect';
+            }
+        }
+        updateUI(); 
+        saveProgress();
+    }
+    
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); 
+            div.className = 'exercise';
+            div.innerHTML = '<h3>Упражнение ' + (idx+1) + '</h3><p>' + ex.question + '</p><textarea id="ex-input-' + idx + '" rows="3" placeholder="Введите ваш ответ..."></textarea><button class="check-btn" onclick="checkExercise(' + idx + ', document.getElementById(\'ex-input-' + idx + '\').value)">Проверить</button><div id="ex-result-' + idx + '" class="ex-result"></div>';
+            if (exercisesCompleted[idx]) { 
+                const resultDiv = div.querySelector('#ex-result-' + idx);
+                if (resultDiv) {
+                    resultDiv.innerHTML = 'Выполнено. ' + (ex.explanation || '');
+                    resultDiv.className = 'ex-result correct';
+                }
+            }
+            container.appendChild(div);
+        });
+    }
+    
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока? Все ваши ответы будут удалены.')) {
+            exercisesCompleted.fill(false); 
+            lessonPassed = false;
+            let stored = []; 
+            try { 
+                const s = localStorage.getItem('yakut_lessons_done'); 
+                if (s) stored = JSON.parse(s); 
+            } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); 
+            updateUI(); 
+            alert('Прогресс урока сброшен.');
+        }
+    }
+    
+    function init() {
+        loadProgress(); 
+        renderExercises(); 
+        updateUI();
+        const resetBtn = document.getElementById('resetLessonBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (resetBtn) resetBtn.onclick = resetLesson;
+        if (prevBtn) prevBtn.onclick = () => window.location.href = 'lesson-7-17.html';
+        if (nextBtn) nextBtn.onclick = () => window.location.href = 'lesson-7-19.html';
+    }
+    
+    document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

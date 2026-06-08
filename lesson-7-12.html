@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 7-12 | Прямая речь | Саха тыла</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .lecture-section table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 15px; overflow: hidden; }
+        .lecture-section th, .lecture-section td { border: 1px solid #d4e6c3; padding: 8px 12px; text-align: left; vertical-align: top; }
+        .lecture-section th { background: #e8f5e9; color: #2e6b3e; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        .grammar-table { width: 100%; margin: 15px 0; }
+        .grammar-table td { padding: 8px; }
+        .note-box { background: #e3f2fd; border-radius: 16px; padding: 15px; margin: 15px 0; border-left: 4px solid #1976d2; font-size: 0.95rem; }
+        .sentence-example { background: #fff8e1; padding: 10px 15px; border-radius: 16px; margin: 10px 0; border-left: 4px solid #dba334; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 7-12: Прямая речь</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Прямая речь в якутском языке</h3>
+                <p>Прямая речь — это способ передачи чужого высказывания с сохранением его формы, содержания и стилистических особенностей. В якутском языке прямая речь оформляется с помощью специальных конструкций и знаков препинания. Прямая речь может состоять из одного или нескольких предложений и включать обращение, междометия, частицы.</p>
+                
+                <div class="note-box">
+                    Важно: Прямая речь в якутском языке обычно выделяется с помощью глаголов речи (эт — сказать, ыйыт — спросить, кэпсээ — рассказать, эп — ответить) и послелога «диэн» или его формы «дээн».
+                </div>
+                
+                <h3>Структура предложений с прямой речью</h3>
+                <p>Предложение с прямой речью состоит из двух частей: собственно прямой речи (чужих слов) и слов автора (комментария, указывающего, кому принадлежит речь).</p>
+                
+                <h3>1. Слова автора перед прямой речью</h3>
+                <p>В этом случае после слов автора ставится двоеточие, а прямая речь начинается с новой строки или продолжается в той же строке.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Кини эппитэ: «Мин сарсын кэлиэм». — Он сказал: «Я приду завтра».<br>
+                    Учуутал ыйыппыта: «Уруогу бэлэмнээтиҥ дуо?» — Учитель спросил: «Ты подготовил урок?»<br>
+                    Оҕо курдук саҥарда: «Аҕам кэллэ!» — Закричал как ребёнок: «Папа пришёл!»
+                </div>
+                
+                <h3>2. Слова автора после прямой речи</h3>
+                <p>В этом случае прямая речь заключается в кавычки, после неё ставится запятая, вопросительный или восклицательный знак, а затем тире и слова автора.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    «Мин сарсын кэлиэм», — диэн эппитэ кини. — «Я приду завтра», — сказал он.<br>
+                    «Уруогу бэлэмнээтиҥ дуо?» — диэн ыйыппыта учуутал. — «Ты подготовил урок?» — спросил учитель.<br>
+                    «Аҕам кэллэ!» — диэн кыыс курдук саҥарда. — «Папа пришёл!» — закричал как девочка.
+                </div>
+                
+                <h3>3. Слова автора внутри прямой речи</h3>
+                <p>Слова автора могут разрывать прямую речь. В этом случае прямая речь заключается в кавычки, а слова автора выделяются тире с обеих сторон.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    «Бардахпына, — диэн эттэ кини, — эйигин көрүөҕүм». — «Если я пойду, — сказал он, — я тебя увижу».<br>
+                    «Кинигэни, — диэн ыйыппыта учуутал, — аахтыҥ дуо?» — «Книгу, — спросил учитель, — ты прочитал?»
+                </div>
+                
+                <h3>Глаголы, вводящие прямую речь</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Якутский глагол</th><th>Перевод</th><th>Пример</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>эт / эп (эттэ / эппитэ)</td><td>сказать / сказал</th>
+                        <td>Кини эппитэ: «Кэл». → Он сказал: «Приди».</th>
+                        <tr>
+                        <tr>
+    
+——</td>
+                        <td>ыйыт / ыйып (ыйытта / ыйыппыта)</td>
+            
+—
+спросить / спросил</th>
+                        <td>Кини ыйыппыта: «Ханна бараҕын?» → Он спросил: «Куда идёшь?»</th>
+                        </tr>
+                        <tr>
+                        <tr>
+    
+——</td>
+                        <td>кэпсээ / кэпсээтэ (рассказать)</th>
+                        <td>Кини кэпсээтэ: «Мин ыраахтан кэллим». → Он рассказал: «Я приехал издалека».</th>
+                        </tr>
+                        <tr>
+                        <tr>
+    
+——</td>
+                        <td>саҥар / саҥарда (закричать)</th>
+                        <td>Кини саҥарда: «Босхолоо!» → Он закричал: «Освободи!»</th>
+                        </tr>
+                        <tr>
+                        <tr>
+    
+——</td>
+                        <td>от / отто (ответить)</th>
+                        <td>Кини отто: «Сөп». → Он ответил: «Хорошо».</th>
+                        </tr>
+                        <tr>
+                    </tbody>
+                </table>
+                
+                <h3>Знаки препинания при прямой речи</h3>
+                <ul>
+                    <li><strong>Двоеточие</strong> ставится после слов автора перед прямой речью.</li>
+                    <li><strong>Кавычки</strong> используются для выделения прямой речи на письме.</li>
+                    <li><strong>Запятая</strong> ставится после прямой речи перед словами автора, если прямая речь — повествовательное предложение.</li>
+                    <li><strong>Вопросительный или восклицательный знак</strong> ставится после прямой речи перед словами автора, если предложение вопросительное или восклицательное.</li>
+                    <li><strong>Тире</strong> ставится после прямой речи перед словами автора.</li>
+                </ul>
+                
+                <h3>Прямая речь с обращением</h3>
+                <p>Обращение в прямой речи выделяется запятыми и может стоять в начале, в середине или в конце прямой речи.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    «Доҕорум, кэл!» — диэн ыҥырда. — «Друг, приди!» — позвал он.<br>
+                    «Кэл, доҕорум, бу дьиэбэр», — диэн эттэ. — «Приди, друг, в мой дом», — сказал он.<br>
+                    «Кэл!» — диэн ыҥырда доҕорун. — «Приди!» — позвал он друга.
+                </div>
+                
+                <h3>Прямая речь в диалоге</h3>
+                <p>В диалоге каждая реплика начинается с новой строки, перед репликой ставится тире. Кавычки не ставятся.</p>
+                <div class="sentence-example">
+                    <strong>Пример диалога:</strong><br>
+                    — Сарсын киинэҕэ барабыт дуо? — спросил друг.<br>
+                    — Барабыт! — ответил я.<br>
+                    — Ханнык киинэни көрөбүт? — поинтересовался он.<br>
+                    — Саҥа кэлбит киинэни, — сказал я.
+                </div>
+                
+                <div class="sentence-example">
+                    <strong>Перевод диалога:</strong><br>
+                    — Завтра пойдём в кино? — спросил друг.<br>
+                    — Пойдём! — ответил я.<br>
+                    — Какой фильм будем смотреть? — поинтересовался он.<br>
+                    — Недавно пришедший фильм, — сказал я.
+                </div>
+                
+                <h3>Таблица оформления прямой речи</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Схема</th><th>Пример</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>  
+<td>А: «П».</td>
+                        <td>Кини эппитэ: «Мин кэлэн иһэбин»。</td>
+                        </tr>
+                        <tr>  
+<td>«П», — а。</td>
+                        <td>«Мин кэлэн иһэбин», — диэн эппитэ кини。</td>
+                        </tr>
+                        <tr>
+  
+<td>А: «П?»</td>
+                        <td>Кини ыйыппыта: «Ханна бараҕын?»</td>
+                        </tr>
+                        <tr>
+  
+<td>«П?» — а。</td>
+                        <td>«Ханна бараҕын?» — диэн ыйыппыта кини。</td>
+                        </tr>
+                        <tr>
+  
+<td>А: «П!»</td>
+                        <td>Кини саҥарда: «Босхолоо!»</td>
+                        </tr>
+                        <tr>
+  
+<td>«П!» — а。</td>
+                        <td>«Босхолоо!» — диэн саҥарда кини。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Примеры для анализа</h3>
+                <ul>
+                    <li>Кини эппитэ: «Барбаппын». — Он сказал: «Не пойду».</li>
+                    <li>«Кэлиэххэ наада», — диэн эттэ учуутал. — «Прийти нужно», — сказал учитель.</li>
+                    <li>«Туох буолла?» — диэн ыйыппыта кини. — «Что случилось?» — спросил он.</li>
+                    <li>«Мин, — диэн саҥарда оҕо, — кыайыахтаахпын». — «Я, — закричал ребёнок, — должен победить».</li>
+                    <li>«Эйигин көрсөбүн», — диэн кэпсээтэ доҕорум. — «Я тебя встречу», — рассказал мой друг.</li>
+                </ul>
+                
+                <h3>Важные замечания</h3>
+                <p>В якутском языке для введения прямой речи часто используется послелог «диэн» (что, мол) или его форма «дээн». После слов автора, стоящих перед прямой речью, двоеточие может не ставиться, если прямая речь вводится через «диэн». При переводе с русского языка на якутский важно правильно расставлять знаки препинания и выбирать соответствующие глаголы для введения прямой речи.</p>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "7-12";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Как переводится на якутский язык глагол 'сказать' для введения прямой речи?", answerKeywords: ["эт", "эп"], hint: "Основной глагол речи", explanation: "Эт / эп (сказать)." },
+        { question: "2. Как переводится на якутский язык глагол 'спросить' для введения прямой речи?", answerKeywords: ["ыйыт"], hint: "Глагол вопроса", explanation: "Ыйыт (спросить)." },
+        { question: "3. Какой послелог используется для введения прямой речи в якутском языке?", answerKeywords: ["диэн"], hint: "Послелог 'что', 'мол'", explanation: "Диэн (что, мол)." },
+        { question: "4. Переведите на русский язык: 'Кини эппитэ: «Мин сарсын кэлиэм».'", answerKeywords: ["он сказал я приду завтра"], hint: "Кини — он, эппитэ — сказал, мин — я, сарсын — завтра, кэлиэм — приду", explanation: "Он сказал: «Я приду завтра»." },
+        { question: "5. Переведите на якутский язык: 'Учитель спросил: «Ты подготовил урок?»'", answerKeywords: ["учуутал", "ыйыппыта", "уруогун", "бэлэмнээтиҥ", "дуо"], hint: "Используйте глагол 'ыйыт' и вопросительную частицу 'дуо'", explanation: "Учуутал ыйыппыта: «Уруогун бэлэмнээтиҥ дуо?»" },
+        { question: "6. Переведите на русский язык: '«Барбаппын», — диэн эппитэ кини.'", answerKeywords: ["не пойду сказал он"], hint: "Барбаппын — не пойду, диэн — что, эппитэ — сказал, кини — он", explanation: "«Не пойду», — сказал он." },
+        { question: "7. Переделайте предложение, поставив слова автора после прямой речи: 'Кини эппитэ: «Мин кэлиэм».'", answerKeywords: ["мин", "кэлиэм", "диэн", "эппитэ", "кини"], hint: "Прямая речь в кавычках, затем тире и слова автора", explanation: "«Мин кэлиэм», — диэн эппитэ кини." },
+        { question: "8. Составьте диалог из двух реплик на якутском языке (вопрос и ответ).", answerKeywords: ["ыйыт", "эп"], hint: "Используйте тире перед каждой репликой", explanation: "Пример: — Ханна бараҕын? — диэн ыйыппыта. — Дьиэбэр барабын, — диэн эппитэ." },
+        { question: "9. Переведите на якутский язык: 'Он закричал: «Освободи!»'", answerKeywords: ["кини", "саҥарда", "босхолоо"], hint: "Используйте глагол 'саҥар'", explanation: "Кини саҥарда: «Босхолоо!»" },
+        { question: "10. Напишите три глагола, которые используются для введения прямой речи в якутском языке, с переводом на русский.", answerKeywords: ["эт", "ыйыт", "кэпсээ", "саҥар", "от"], hint: "Глаголы речи", explanation: "1) эт — сказать; 2) ыйыт — спросить; 3) кэпсээ — рассказать; 4) саҥар — закричать; 5) от — ответить." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    
+    function loadProgress() { 
+        try { 
+            const saved = localStorage.getItem(`lesson_${lessonId}_progress`); 
+            if (saved) { 
+                const data = JSON.parse(saved); 
+                exercisesCompleted = data.completed; 
+                lessonPassed = data.passed; 
+            } 
+        } catch(e) {} 
+        try { 
+            const saved = localStorage.getItem('yakut_lessons_done'); 
+            if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; 
+        } catch(e) {} 
+        updateUI(); 
+    }
+    
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) progressFill.style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; 
+                try { 
+                    const s = localStorage.getItem('yakut_lessons_done'); 
+                    if (s) stored = JSON.parse(s); 
+                } catch(e) {}
+                if (!stored.includes(lessonId)) { 
+                    stored.push(lessonId); 
+                    localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); 
+                }
+            }
+            if (status) {
+                status.innerHTML = 'Пройдено (' + count + '/10)';
+                status.className = 'status-badge status-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'inline-block';
+        } else { 
+            if (status) {
+                status.innerHTML = 'Не пройдено (' + count + '/10)';
+                status.className = 'status-badge status-not-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'none';
+        }
+        saveProgress();
+    }
+    
+    function normalizeAnswer(str) {
+        if (!str) return '';
+        return str.toLowerCase()
+            .replace(/[ъь]/g, '')
+            .replace(/[^\wа-яёөүҥһ]/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+    
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const normalizedAnswer = normalizeAnswer(answer);
+        let isCorrect = false;
+        
+        if (idx === 9) {
+            let foundCount = 0;
+            const correctWords = ["эт", "ыйыт", "кэпсээ", "саҥар", "от"];
+            const answerLower = normalizedAnswer;
+            for (let word of correctWords) {
+                if (answerLower.includes(word)) {
+                    foundCount++;
+                }
+            }
+            isCorrect = foundCount >= 2;
+        } else if (idx === 8) {
+            const hasSangarda = normalizedAnswer.includes("саҥарда");
+            const hasBoskholoo = normalizedAnswer.includes("босхолоо");
+            isCorrect = (hasSangarda && hasBoskholoo);
+        } else if (idx === 7) {
+            const hasMink = normalizedAnswer.includes("мин");
+            const hasKeliEm = normalizedAnswer.includes("кэлиэм");
+            const hasDien = normalizedAnswer.includes("диэн");
+            const hasEppite = normalizedAnswer.includes("эппитэ");
+            isCorrect = (hasMink && (hasDien || hasEppite));
+        } else if (idx === 6) {
+            const hasBarbappyn = normalizedAnswer.includes("барбаппын");
+            const hasDien = normalizedAnswer.includes("диэн");
+            const hasEppite = normalizedAnswer.includes("эппитэ");
+            isCorrect = (hasBarbappyn && (hasDien || hasEppite));
+        } else if (idx === 5) {
+            const hasUchutal = normalizedAnswer.includes("учуутал");
+            const hasIyrypta = normalizedAnswer.includes("ыйыппыта");
+            const hasBelya = normalizedAnswer.includes("бэлэмнээтиҥ");
+            isCorrect = (hasUchutal && (hasIyrypta || hasBelya));
+        } else if (idx === 4) {
+            const hasEppite = normalizedAnswer.includes("эппитэ");
+            const hasSarsyn = normalizedAnswer.includes("сарсын");
+            const hasKeliEm = normalizedAnswer.includes("кэлиэм");
+            isCorrect = (hasEppite && (hasSarsyn || hasKeliEm));
+        } else {
+            const allKeywordsPresent = ex.answerKeywords.every(keyword => 
+                normalizedAnswer.includes(keyword.toLowerCase())
+            );
+            isCorrect = allKeywordsPresent;
+        }
+        
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { 
+            exercisesCompleted[idx] = true; 
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Верно. ' + (ex.explanation || '');
+                resultDiv.className = 'ex-result correct';
+            }
+        } else { 
+            exercisesCompleted[idx] = false;
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Неверно. ' + (ex.hint || 'Попробуйте ещё раз, сверьтесь с лекцией.');
+                resultDiv.className = 'ex-result incorrect';
+            }
+        }
+        updateUI(); 
+        saveProgress();
+    }
+    
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); 
+            div.className = 'exercise';
+            div.innerHTML = '<h3>Упражнение ' + (idx+1) + '</h3><p>' + ex.question + '</p><textarea id="ex-input-' + idx + '" rows="3" placeholder="Введите ваш ответ на якутском языке..."></textarea><button class="check-btn" onclick="checkExercise(' + idx + ', document.getElementById(\'ex-input-' + idx + '\').value)">Проверить</button><div id="ex-result-' + idx + '" class="ex-result"></div>';
+            if (exercisesCompleted[idx]) { 
+                const resultDiv = div.querySelector('#ex-result-' + idx);
+                if (resultDiv) {
+                    resultDiv.innerHTML = 'Выполнено. ' + (ex.explanation || '');
+                    resultDiv.className = 'ex-result correct';
+                }
+            }
+            container.appendChild(div);
+        });
+    }
+    
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока? Все ваши ответы будут удалены.')) {
+            exercisesCompleted.fill(false); 
+            lessonPassed = false;
+            let stored = []; 
+            try { 
+                const s = localStorage.getItem('yakut_lessons_done'); 
+                if (s) stored = JSON.parse(s); 
+            } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); 
+            updateUI(); 
+            alert('Прогресс урока сброшен.');
+        }
+    }
+    
+    function init() {
+        loadProgress(); 
+        renderExercises(); 
+        updateUI();
+        const resetBtn = document.getElementById('resetLessonBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (resetBtn) resetBtn.onclick = resetLesson;
+        if (prevBtn) prevBtn.onclick = () => window.location.href = 'lesson-7-11.html';
+        if (nextBtn) nextBtn.onclick = () => window.location.href = 'lesson-7-13.html';
+    }
+    
+    document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

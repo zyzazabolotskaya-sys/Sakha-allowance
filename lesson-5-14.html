@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 5.14 | Времена года</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 5.14: Времена года</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Времена года в Якутии</h3>
+                <p>Якутия — край с ярко выраженными сезонами. Из-за сурового климата зима здесь длится около 7-8 месяцев, а лето — всего 2-3 месяца. Тем не менее, каждое время года имеет свои особенности и красоту.</p>
+                <p><strong>Времена года на якутском языке:</strong></p>
+                <ul>
+                    <li><strong>Саас</strong> — весна. Начинается в мае. Это время таяния снегов и ледохода на реках. Природа просыпается, появляются первые цветы — ньургуһун (подснежники).</li>
+                    <li><strong>Сайын</strong> — лето. Короткое, но тёплое. Температура может подниматься до +30°C и выше. В это время проводят Ысыах — национальный праздник лета.</li>
+                    <li><strong>Күһүн</strong> — осень. Начинается в сентябре. Время золотой листвы, сбора урожая и подготовки к зиме.</li>
+                    <li><strong>Кыһын</strong> — зима. Самое долгое время года (октябрь-апрель). Температура может опускаться до -50°C и ниже. В это время стоит полярная ночь за Северным полярным кругом.</li>
+                </ul>
+                <p><strong>Месяцы на якутском языке:</strong> Тохсунньу (январь), Олунньу (февраль), Кулун тутар (март), Муус устар (апрель), Ыам ыйа (май), Бэс ыйа (июнь), От ыйа (июль), Атырдьах ыйа (август), Балаҕан ыйа (сентябрь), Алтынньы (октябрь), Сэтинньи (ноябрь), Ахсынньы (декабрь).</p>
+                <p><strong>Примеры предложений:</strong> Саас күн сылаас (весной солнце тёплое). Сайын итии (летом жарко). Күһүн хаар түһэр (осенью снег идёт). Кыһын тымныы (зимой холодно). Мин сайыны сөбүлүүбүн (я люблю лето).</p>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "5-14";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Как будет 'весна' по-якутски?", answerKeywords: ["саас"], hint: "Саас", explanation: "Саас — весна." },
+        { question: "2. Как будет 'лето' по-якутски?", answerKeywords: ["сайын"], hint: "Сайын", explanation: "Сайын — лето." },
+        { question: "3. Как будет 'осень' по-якутски?", answerKeywords: ["күһүн"], hint: "Күһүн", explanation: "Күһүн — осень." },
+        { question: "4. Как будет 'зима' по-якутски?", answerKeywords: ["кыһын"], hint: "Кыһын", explanation: "Кыһын — зима." },
+        { question: "5. Как будет 'месяц' по-якутски?", answerKeywords: ["ый"], hint: "Ый", explanation: "Ый — месяц." },
+        { question: "6. Как будет 'год' по-якутски?", answerKeywords: ["дьыл"], hint: "Дьыл", explanation: "Дьыл — год." },
+        { question: "7. Как будет 'летом жарко' по-якутски?", answerKeywords: ["сайын", "итии"], hint: "Сайын итии", explanation: "Сайын итии — летом жарко." },
+        { question: "8. Составьте предложение 'Зимой холодно' на якутском языке.", answerKeywords: ["кыһын", "тымныы"], hint: "Кыһын тымныы", explanation: "Кыһын тымныы — зимой холодно." },
+        { question: "9. Составьте предложение 'Я люблю лето' на якутском языке.", answerKeywords: ["мин", "сайыны", "сөбүлүүбүн"], hint: "Мин сайыны сөбүлүүбүн", explanation: "Мин сайыны сөбүлүүбүн — я люблю лето." },
+        { question: "10. Опишите своё любимое время года на якутском языке (5-7 предложений).", answerKeywords: ["мин", "сөбүлүүбүн", "сайын", "кыһын", "саас"], hint: "Напишите о любимом времени года", explanation: "Пример: Мин сайыны сөбүлүүбүн. Сайын итии." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    function loadProgress() { try { const saved = localStorage.getItem(`lesson_${lessonId}_progress`); if (saved) { const data = JSON.parse(saved); exercisesCompleted = data.completed; lessonPassed = data.passed; } } catch(e) {} try { const saved = localStorage.getItem('yakut_lessons_done'); if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; } catch(e) {} updateUI(); }
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        document.getElementById('progressFill').style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; try { const s = localStorage.getItem('yakut_lessons_done'); if (s) stored = JSON.parse(s); } catch(e) {}
+                if (!stored.includes(lessonId)) { stored.push(lessonId); localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); if (window.userProgress?.lessonsDone) window.userProgress.lessonsDone.push(lessonId); }
+            }
+            status.innerHTML = 'Пройдено'; status.className = 'status-badge status-completed'; resetBtn.style.display = 'inline-block';
+        } else { status.innerHTML = 'Не пройдено (' + count + '/10)'; status.className = 'status-badge status-not-completed'; resetBtn.style.display = 'none'; }
+        saveProgress();
+    }
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const lower = answer.toLowerCase();
+        const matchCount = ex.answerKeywords.filter(k => lower.includes(k.toLowerCase())).length;
+        const isCorrect = matchCount >= ex.answerKeywords.length * 0.5;
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { exercisesCompleted[idx] = true; resultDiv.innerHTML = '✓ Правильно! ' + (ex.explanation || ''); resultDiv.className = 'ex-result correct'; }
+        else { resultDiv.innerHTML = '✗ Неправильно. ' + (ex.hint || 'Попробуйте ещё раз.'); resultDiv.className = 'ex-result incorrect'; }
+        updateUI(); saveProgress();
+    }
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); div.className = 'exercise';
+            div.innerHTML = `<h3>Упражнение ${idx+1}</h3><p>${ex.question}</p><textarea id="ex-input-${idx}" rows="4" placeholder="Введите ваш ответ..."></textarea><button class="check-btn" onclick="checkExercise(${idx}, document.getElementById('ex-input-${idx}').value)">Проверить</button><div id="ex-result-${idx}" class="ex-result"></div>`;
+            if (exercisesCompleted[idx]) { div.querySelector(`#ex-result-${idx}`).innerHTML = '✓ Выполнено!'; div.querySelector(`#ex-result-${idx}`).className = 'ex-result correct'; }
+            container.appendChild(div);
+        });
+    }
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока?')) {
+            exercisesCompleted.fill(false); lessonPassed = false;
+            let stored = []; try { const s = localStorage.getItem('yakut_lessons_done'); if (s) stored = JSON.parse(s); } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            if (window.userProgress?.lessonsDone) window.userProgress.lessonsDone = window.userProgress.lessonsDone.filter(id => id !== lessonId);
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); updateUI(); alert('Прогресс сброшен!');
+        }
+    }
+    document.getElementById('resetLessonBtn').onclick = resetLesson;
+    document.getElementById('prevBtn').onclick = () => window.location.href = 'lesson-5-13.html';
+    document.getElementById('nextBtn').onclick = () => window.location.href = 'lesson-5-15.html';
+    loadProgress(); renderExercises(); updateUI();
+</script>
+</body>
+</html>

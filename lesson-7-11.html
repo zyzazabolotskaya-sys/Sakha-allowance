@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 7-11 | Страдательный залог | Саха тыла</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .lecture-section table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 15px; overflow: hidden; }
+        .lecture-section th, .lecture-section td { border: 1px solid #d4e6c3; padding: 8px 12px; text-align: left; vertical-align: top; }
+        .lecture-section th { background: #e8f5e9; color: #2e6b3e; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        .grammar-table { width: 100%; margin: 15px 0; }
+        .grammar-table td { padding: 8px; }
+        .note-box { background: #e3f2fd; border-radius: 16px; padding: 15px; margin: 15px 0; border-left: 4px solid #1976d2; font-size: 0.95rem; }
+        .sentence-example { background: #fff8e1; padding: 10px 15px; border-radius: 16px; margin: 10px 0; border-left: 4px solid #dba334; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 7-11: Страдательный залог</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Страдательный залог в якутском языке</h3>
+                <p>Страдательный залог (пассив) показывает, что действие направлено на предмет или лицо, которое является подлежащим в предложении. В якутском языке страдательный залог образуется с помощью специальных суффиксов и используется, когда говорящий хочет подчеркнуть объект действия, а не его производителя.</p>
+                
+                <div class="note-box">
+                    Важно: В якутском языке страдательный залог образуется от переходных глаголов с помощью суффиксов -ыл, -ил, -ул, -үл, -ын, -ин, -ун, -үн.
+                </div>
+                
+                <h3>Образование страдательного залога</h3>
+                <p>Страдательный залог образуется от основы переходного глагола путём прибавления суффиксов <strong>-ыл</strong>, <strong>-ил</strong>, <strong>-ул</strong>, <strong>-үл</strong> (после гласных и некоторых согласных) или <strong>-ын</strong>, <strong>-ин</strong>, <strong>-ун</strong>, <strong>-үн</strong> (после согласных).</p>
+                
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Действительный залог</th><th>Страдательный залог</th><th>Перевод</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>аах (читать) — ааҕ\n(читай)</td><td>ааҕыл (читаться) — ааҕыллар</td><td>читается</td><tr>
+                        <tr><td>суруй (писать) — суруй\n(пиши)</td><td>суруйул (писаться) — суруйуллар</td><td>пишется</td></tr>
+                        <tr><td>көр (смотреть) — көр\n(смотри)</td><td>көст (виднеться) — көстөр</td><td>видится, виднеется</td></tr>
+                        <tr><td>ылыы (брать) — ыл\n(возьми)</td><td>ылыл (браться) — ылыллар</td><td>берётся</td><tr>
+                        <tr><td>эт (сказать) — эт\n(скажи)</td><td>этил (говориться) — этиллэр</td><td>говорится</td></tr>
+                    </tbody>
+                </table>
+                
+                <h3>Спряжение глаголов в страдательном залоге</h3>
+                <p>Глаголы в страдательном залоге спрягаются по тем же правилам, что и обычные глаголы. Ниже приведена таблица спряжения глагола «ааҕыл» (читаться) в настоящем времени.</p>
+                
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Лицо</th><th>Форма</th><th>Перевод</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>мин (я)</td><td>ааҕыллабын</td><td>меня читают / я читаюсь</td></tr>
+                        <tr><td>эн (ты)</td><td>ааҕыллаҕын</td><td>тебя читают / ты читаешься</td></tr>
+                        <tr><td>кини (он)</td><td>ааҕыллар</td><td>его читают / он читается</td></tr>
+                        <tr><td>биһиги (мы)</td><td>ааҕыллабыт</td><td>нас читают / мы читаемся</td></tr>
+                        <tr><td>эһиги (вы)</td><td>ааҕыллагыт</td><td>вас читают / вы читаетесь</td></tr>
+                        <tr><td>кинилэр (они)</td><td>ааҕыллаллар</td><td>их читают / они читаются</td></tr>
+                    </tbody>
+                </table>
+                
+                <h3>Страдательный залог в разных временах</h3>
+                
+                <h3>Прошедшее время</h3>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Бу кинигэ мин ааҕыллыбыт. — Эта книга была мной прочитана.<br>
+                    Сурук суруйуллубут. — Письмо было написано.<br>
+                    Онуоха эппиэт этиллибит. — На это был дан ответ.
+                </div>
+                
+                <h3>Будущее время</h3>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Бу ыстатыйа ааҕыллыа. — Эта статья будет прочитана.<br>
+                    Ыйыы ылыллыа. — Вопрос будет рассмотрен.<br>
+                    Эппиэт этиллиэ. — Ответ будет дан.
+                </div>
+                
+                <h3>Употребление страдательного залога</h3>
+                <p>Страдательный залог используется в следующих случаях:</p>
+                <ul>
+                    <li>Когда производитель действия неизвестен или не важен.</li>
+                    <li>Когда нужно подчеркнуть объект действия.</li>
+                    <li>В научном и официально-деловом стиле речи.</li>
+                </ul>
+                
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Дьиэ тутуллар. — Дом строится. (неизвестно, кем)<br>
+                    Бу кинигэ элбэхтик ааҕыллар. — Эта книга много читается.<br>
+                    Ытык күнүнэн ааҕыллар. — Считается священным днём.
+                </div>
+                
+                <h3>Выражение производителя действия</h3>
+                <p>В страдательном залоге производитель действия (творительный падеж в русском языке) в якутском языке выражается с помощью послелогов <strong>ыла</strong>, <strong>илин</strong> или исходного падежа.</p>
+                
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Бу кинигэ мин ааҕыллыбыт. — Эта книга была прочитана мной.<br>
+                    Сурук учууталынан суруйуллубут. — Письмо было написано учителем.<br>
+                    Бу ырыа народынан ыллыллар. — Эта песня поётся народом.
+                </div>
+                
+                <h3>Таблица образования страдательного залога</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Основа глагола</th><th>Суффикс</th><th>Страдательная форма</th><th>Перевод</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>ааҕ (читай)</td><td>-ыл</td><td>ааҕыл</td><td>читаться</td></tr>
+                        <tr><td>суруй (пиши)</td><td>-ул</td><td>суруйул</td><td>писаться</td></tr>
+                        <tr><td>көр (смотри)</td><td>-үл (чередование)</td><td>көст (көс-т)</td><td>виднеться</td></tr>
+                        <tr><td>эт (скажи)</td><td>-ил</td><td>этил</td><td>говориться</td></tr>
+                        <tr><td>ыл (возьми)</td><td>-ыл</td><td>ылыл</td><td>браться</td></tr>
+                        <tr><td>бил (знай)</td><td>-ил</td><td>билил</td><td>знаться</td></tr>
+                    </tbody>
+                </table>
+                
+                <h3>Примеры предложений со страдательным залогом</h3>
+                <ul>
+                    <li>Бу хаһыат күн аайы ааҕыллар. — Эта газета читается каждый день.</li>
+                    <li>Ыстатыйа бырассыыйаҕа суруйуллубут. — Статья была написана вчера.</li>
+                    <li>Сарсын саха тылын олимпиадата ыытыллыа. — Завтра будет проведена олимпиада по якутскому языку.</li>
+                    <li>Кинигэ библиотекаттан ылыллар. — Книга берётся из библиотеки.</li>
+                    <li>Бу күн өйдөнүллэр. — Этот день запоминается.</li>
+                    <li>Эппиэт этиммитинэн ылылынна. — Ответ был принят как сказанный.</li>
+                    <li>Уруокка саха тылын эрэ туттуллар. — На уроке используется только якутский язык.</li>
+                    <li>Бу быраабыла оҕолорго быһаарыллар. — Это правило объясняется детям.</li>
+                </ul>
+                
+                <h3>Сравнение действительного и страдательного залога</h3>
+                <table class="grammar-table">
+                    <thead>
+                        <tr><th>Действительный залог</th><th>Страдательный залог</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Оҕолор кинигэни ааҕаллар. (Дети читают книгу.)</td><td>Кинигэ оҕолорунан ааҕыллар. (Книга читается детьми.)</td></tr>
+                        <tr><td>Учуутал суругу суруйар. (Учитель пишет письмо.)</td><td>Сурук учууталынан суруйуллар. (Письмо пишется учителем.)</td></tr>
+                        <tr><td>Ыалдьыттар ырыаны ыллыыллар. (Гости поют песню.)</td><td>Ырыа ыалдьыттарынан ыллыллар. (Песня поётся гостями.)</td></tr>
+                    </tbody>
+                </table>
+                
+                <h3>Важные замечания</h3>
+                <p>В якутском языке страдательный залог используется несколько реже, чем в русском. Часто вместо него предпочитают использовать действительный залог с неопределённо-личными конструкциями. Некоторые глаголы, такие как «көст» (виднеться), «иһил» (слышаться), являются страдательными по форме, но имеют самостоятельное значение. При переводе с русского языка на якутский не всегда нужно заменять русский пассив на якутский; часто лучше использовать активные конструкции.</p>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "7-11";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Какой суффикс используется для образования страдательного залога в якутском языке?", answerKeywords: ["ыл", "ил", "ул", "үл"], hint: "Основные суффиксы пассива", explanation: "Суффиксы -ыл, -ил, -ул, -үл." },
+        { question: "2. Образуйте страдательный залог от глагола 'аах' (читать).", answerKeywords: ["ааҕыл"], hint: "Добавьте суффикс -ыл", explanation: "Ааҕыл (читаться)." },
+        { question: "3. Образуйте страдательный залог от глагола 'суруй' (писать).", answerKeywords: ["суруйул"], hint: "Добавьте суффикс -ул", explanation: "Суруйул (писаться)." },
+        { question: "4. Образуйте страдательный залог от глагола 'эт' (сказать).", answerKeywords: ["этил"], hint: "Добавьте суффикс -ил", explanation: "Этил (говориться)." },
+        { question: "5. Переведите на русский язык: 'Бу кинигэ элбэхтик ааҕыллар.'", answerKeywords: ["эта книга много читается"], hint: "Бу — эта, кинигэ — книга, элбэхтик — много, ааҕыллар — читается", explanation: "Эта книга много читается." },
+        { question: "6. Переведите на якутский язык: 'Дом строится.'", answerKeywords: ["дьиэ", "тутуллар"], hint: "Используйте страдательный залог от глагола 'тут' (строить)", explanation: "Дьиэ тутуллар." },
+        { question: "7. Переведите на русский язык: 'Бу күн өйдөнүллэр.'", answerKeywords: ["этот день запоминается"], hint: "Бу — этот, күн — день, өйдөнүллэр — запоминается", explanation: "Этот день запоминается." },
+        { question: "8. Переделайте предложение из действительного залога в страдательный: 'Оҕолор кинигэни ааҕаллар.' (Дети читают книгу.)", answerKeywords: ["кинигэ", "оҕолорунан", "ааҕыллар"], hint: "Книга становится подлежащим", explanation: "Кинигэ оҕолорунан ааҕыллар." },
+        { question: "9. Переведите на якутский язык: 'Статья была написана вчера.'", answerKeywords: ["ыстатыйа", "бырассыыйаҕа", "суруйуллубут"], hint: "Используйте страдательный залог прошедшего времени", explanation: "Ыстатыйа бырассыыйаҕа суруйуллубут." },
+        { question: "10. Напишите три глагола в страдательном залоге с переводом на русский язык.", answerKeywords: ["ааҕыл", "суруйул", "тутул", "көст", "иһил"], hint: "Например: ааҕыл (читаться), суруйул (писаться), тутул (строиться)", explanation: "1) ааҕыл — читаться; 2) суруйул — писаться; 3) тутул — строиться." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    
+    function loadProgress() { 
+        try { 
+            const saved = localStorage.getItem(`lesson_${lessonId}_progress`); 
+            if (saved) { 
+                const data = JSON.parse(saved); 
+                exercisesCompleted = data.completed; 
+                lessonPassed = data.passed; 
+            } 
+        } catch(e) {} 
+        try { 
+            const saved = localStorage.getItem('yakut_lessons_done'); 
+            if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; 
+        } catch(e) {} 
+        updateUI(); 
+    }
+    
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) progressFill.style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; 
+                try { 
+                    const s = localStorage.getItem('yakut_lessons_done'); 
+                    if (s) stored = JSON.parse(s); 
+                } catch(e) {}
+                if (!stored.includes(lessonId)) { 
+                    stored.push(lessonId); 
+                    localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); 
+                }
+            }
+            if (status) {
+                status.innerHTML = 'Пройдено (' + count + '/10)';
+                status.className = 'status-badge status-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'inline-block';
+        } else { 
+            if (status) {
+                status.innerHTML = 'Не пройдено (' + count + '/10)';
+                status.className = 'status-badge status-not-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'none';
+        }
+        saveProgress();
+    }
+    
+    function normalizeAnswer(str) {
+        if (!str) return '';
+        return str.toLowerCase()
+            .replace(/[ъь]/g, '')
+            .replace(/[^\wа-яёөүҥһ]/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+    
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const normalizedAnswer = normalizeAnswer(answer);
+        let isCorrect = false;
+        
+        if (idx === 9) {
+            let foundCount = 0;
+            const correctWords = ["ааҕыл", "суруйул", "тутул", "көст", "иһил"];
+            const answerLower = normalizedAnswer;
+            for (let word of correctWords) {
+                if (answerLower.includes(word)) {
+                    foundCount++;
+                }
+            }
+            isCorrect = foundCount >= 2;
+        } else if (idx === 8) {
+            const hasYstatya = normalizedAnswer.includes("ыстатыйа");
+            const hasByl = normalizedAnswer.includes("бырассыыйаҕа") || normalizedAnswer.includes("суруйуллубут");
+            isCorrect = (hasYstatya && hasByl);
+        } else if (idx === 7) {
+            const hasKinige = normalizedAnswer.includes("кинигэ");
+            const hasAagy = normalizedAnswer.includes("ааҕыллар");
+            isCorrect = (hasKinige && hasAagy);
+        } else if (idx === 6) {
+            const hasDjie = normalizedAnswer.includes("дьиэ");
+            const hasTutullar = normalizedAnswer.includes("тутуллар");
+            isCorrect = (hasDjie && hasTutullar);
+        } else if (idx === 5) {
+            const hasBu = normalizedAnswer.includes("бу");
+            const hasKinige = normalizedAnswer.includes("кинигэ");
+            const hasAagyllar = normalizedAnswer.includes("ааҕыллар");
+            isCorrect = (hasBu && (hasKinige || hasAagyllar));
+        } else {
+            const allKeywordsPresent = ex.answerKeywords.every(keyword => 
+                normalizedAnswer.includes(keyword.toLowerCase())
+            );
+            isCorrect = allKeywordsPresent;
+        }
+        
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { 
+            exercisesCompleted[idx] = true; 
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Верно. ' + (ex.explanation || '');
+                resultDiv.className = 'ex-result correct';
+            }
+        } else { 
+            exercisesCompleted[idx] = false;
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Неверно. ' + (ex.hint || 'Попробуйте ещё раз, сверьтесь с лекцией.');
+                resultDiv.className = 'ex-result incorrect';
+            }
+        }
+        updateUI(); 
+        saveProgress();
+    }
+    
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); 
+            div.className = 'exercise';
+            div.innerHTML = '<h3>Упражнение ' + (idx+1) + '</h3><p>' + ex.question + '</p><textarea id="ex-input-' + idx + '" rows="3" placeholder="Введите ваш ответ на якутском языке..."></textarea><button class="check-btn" onclick="checkExercise(' + idx + ', document.getElementById(\'ex-input-' + idx + '\').value)">Проверить</button><div id="ex-result-' + idx + '" class="ex-result"></div>';
+            if (exercisesCompleted[idx]) { 
+                const resultDiv = div.querySelector('#ex-result-' + idx);
+                if (resultDiv) {
+                    resultDiv.innerHTML = 'Выполнено. ' + (ex.explanation || '');
+                    resultDiv.className = 'ex-result correct';
+                }
+            }
+            container.appendChild(div);
+        });
+    }
+    
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока? Все ваши ответы будут удалены.')) {
+            exercisesCompleted.fill(false); 
+            lessonPassed = false;
+            let stored = []; 
+            try { 
+                const s = localStorage.getItem('yakut_lessons_done'); 
+                if (s) stored = JSON.parse(s); 
+            } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); 
+            updateUI(); 
+            alert('Прогресс урока сброшен.');
+        }
+    }
+    
+    function init() {
+        loadProgress(); 
+        renderExercises(); 
+        updateUI();
+        const resetBtn = document.getElementById('resetLessonBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (resetBtn) resetBtn.onclick = resetLesson;
+        if (prevBtn) prevBtn.onclick = () => window.location.href = 'lesson-7-10.html';
+        if (nextBtn) nextBtn.onclick = () => window.location.href = 'lesson-7-12.html';
+    }
+    
+    document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

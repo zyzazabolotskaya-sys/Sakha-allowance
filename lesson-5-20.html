@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 5.20 | Повторение 5 класса</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 5.20: Повторение 5 класса</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Что мы выучили в 5 классе</h3>
+                <p>Поздравляю! Вы прошли все уроки 5 класса. За это время вы выучили много новых слов и выражений на якутском языке. Давайте повторим основные темы.</p>
+                <p><strong>Алфавит:</strong> 40 букв, особые буквы: Ҕ, Ҥ, Ө, Ү, Һ, Нь, Дь. Гармония гласных — в слове могут быть только твёрдые (А,О,У,Ы) или только мягкие (Э,И,Ө,Ү) гласные. Ударение падает на последний слог.</p>
+                <p><strong>Приветствия и знакомство:</strong> Дорообо (здравствуйте), Эҕэрдэ (привет), Мин аатым... (меня зовут), Эн аатыҥ ким? (как тебя зовут?), Махтал (спасибо), Көрсүөххэ диэри (до свидания).</p>
+                <p><strong>Семья:</strong> Аҕа (отец), Ийэ (мать), Уол (сын), Кыыс (дочь), Быраат (брат), Балыс (сестра), Эбэ (бабушка), Эһэ (дедушка).</p>
+                <p><strong>Цвета:</strong> Кыһыл (красный), Күөх (зелёный/синий), Үрүҥ (белый), Хара (чёрный), Саһархай (жёлтый), Бороҥ (коричневый).</p>
+                <p><strong>Числа 1-20:</strong> Биир, икки, үс, түөрт, биэс, алта, сэттэ, аҕыс, тоҕус, уон, уон биир, уон икки, ..., сүүрбэ.</p>
+                <p><strong>Животные:</strong> Ыт (собака), Куоска (кошка), Ат (лошадь), Ынах (корова), Таба (олень), Эһэ (медведь), Бөрө (волк), Саһыл (лиса), Куобах (заяц).</p>
+                <p><strong>Еда:</strong> Үүт (молоко), Эт (мясо), Балык (рыба), Киэҥ (хлеб), Чэй (чай), Уу (вода).</p>
+                <p><strong>Одежда:</strong> Сон (шуба), Бэргэһэ (шапка), Этэрбэс (сапоги), Тэлигэ (пальто), Таҥас (одежда).</p>
+                <p><strong>Погода и времена года:</strong> Хаар (снег), Ардах (дождь), Күн (солнце), Тымныы (холодно), Сылаас (тепло). Саас (весна), Сайын (лето), Күһүн (осень), Кыһын (зима).</p>
+                <p><strong>Дом и мебель:</strong> Дьиэ (дом), Остуол (стол), Орон (кровать), Тэтэрээт (стул), Аан (дверь), Түннүк (окно), Ыскаап (шкаф).</p>
+                <p><strong>Школа:</strong> Оскуола (школа), Үөрэнээччи (ученик), Учуутал (учитель), Кинигэ (книга), Тэтэрээт (тетрадь), Бичигэс (ручка).</p>
+                <p><strong>Дни недели:</strong> Бэнидиэнньик, оптуорунньук, сэрэдэ, чэппиэр, бээтинсэ, субуота, баскыһыанньа.</p>
+                <p><strong>Части тела:</strong> Төбө (голова), Харах (глаз), Кулгаах (ухо), Илии (рука), Атах (нога).</p>
+                <p><strong>Профессии:</strong> Учуутал (учитель), Быраас (врач), Тутааччы (строитель), Суоппар (водитель), Асчыт (повар).</p>
+                <p>В 6 классе вас ждут новые темы: глаголы, падежи, прилагательные, наречия и многое другое. Успехов в изучении якутского языка!</p>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "5-20";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Сколько букв в якутском алфавите? Перечислите 3 особые якутские буквы.", answerKeywords: ["40", "Ҕ", "Ҥ", "Ө", "Ү", "Һ", "Нь", "Дь"], hint: "40 букв", explanation: "40 букв. Особые буквы: Ҕ, Ҥ, Ө, Ү, Һ, Нь, Дь." },
+        { question: "2. Как сказать 'Здравствуйте' и 'Спасибо' по-якутски?", answerKeywords: ["дорообо", "махтал"], hint: "Дорообо, махтал", explanation: "Дорообо — здравствуйте, махтал — спасибо." },
+        { question: "3. Как будет 'брат' и 'сестра' по-якутски?", answerKeywords: ["быраат", "балыс"], hint: "Быраат, балыс", explanation: "Быраат — брат, балыс — сестра." },
+        { question: "4. Как будет 'красный' и 'белый' по-якутски?", answerKeywords: ["кыһыл", "үрүҥ"], hint: "Кыһыл, үрүҥ", explanation: "Кыһыл — красный, үрүҥ — белый." },
+        { question: "5. Как будет 7 и 15 по-якутски?", answerKeywords: ["сэттэ", "уон биэс"], hint: "Сэттэ, уон биэс", explanation: "Сэттэ — семь, уон биэс — пятнадцать." },
+        { question: "6. Как будет 'собака' и 'лошадь' по-якутски?", answerKeywords: ["ыт", "ат"], hint: "Ыт, ат", explanation: "Ыт — собака, ат — лошадь." },
+        { question: "7. Как будет 'молоко' и 'хлеб' по-якутски?", answerKeywords: ["үүт", "киэҥ"], hint: "Үүт, киэҥ", explanation: "Үүт — молоко, киэҥ — хлеб." },
+        { question: "8. Составьте предложение 'Меня зовут Айсен' на якутском языке.", answerKeywords: ["мин", "аатым", "айсен"], hint: "Мин аатым Айсен", explanation: "Мин аатым Айсен — меня зовут Айсен." },
+        { question: "9. Составьте предложение 'Я живу в доме' на якутском языке.", answerKeywords: ["мин", "дьиэҕэ", "олоробун"], hint: "Мин дьиэҕэ олоробун", explanation: "Мин дьиэҕэ олоробун — я живу в доме." },
+        { question: "10. Напишите короткий рассказ о себе на якутском языке (8-10 предложений).", answerKeywords: ["аатым", "саастаахпын", "үөрэнэбин", "дьиэҕэ", "олоробун"], hint: "Имя, возраст, учёба, дом", explanation: "Пример: Мин аатым Айсен. Мин 11 саастаахпын. Мин 5 кылааска үөрэнэбин." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    function loadProgress() { try { const saved = localStorage.getItem(`lesson_${lessonId}_progress`); if (saved) { const data = JSON.parse(saved); exercisesCompleted = data.completed; lessonPassed = data.passed; } } catch(e) {} try { const saved = localStorage.getItem('yakut_lessons_done'); if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; } catch(e) {} updateUI(); }
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        document.getElementById('progressFill').style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; try { const s = localStorage.getItem('yakut_lessons_done'); if (s) stored = JSON.parse(s); } catch(e) {}
+                if (!stored.includes(lessonId)) { stored.push(lessonId); localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); if (window.userProgress?.lessonsDone) window.userProgress.lessonsDone.push(lessonId); }
+            }
+            status.innerHTML = 'Пройдено'; status.className = 'status-badge status-completed'; resetBtn.style.display = 'inline-block';
+        } else { status.innerHTML = 'Не пройдено (' + count + '/10)'; status.className = 'status-badge status-not-completed'; resetBtn.style.display = 'none'; }
+        saveProgress();
+    }
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const lower = answer.toLowerCase();
+        const matchCount = ex.answerKeywords.filter(k => lower.includes(k.toLowerCase())).length;
+        const isCorrect = matchCount >= ex.answerKeywords.length * 0.5;
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { exercisesCompleted[idx] = true; resultDiv.innerHTML = '✓ Правильно! ' + (ex.explanation || ''); resultDiv.className = 'ex-result correct'; }
+        else { resultDiv.innerHTML = '✗ Неправильно. ' + (ex.hint || 'Попробуйте ещё раз.'); resultDiv.className = 'ex-result incorrect'; }
+        updateUI(); saveProgress();
+    }
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); div.className = 'exercise';
+            div.innerHTML = `<h3>Упражнение ${idx+1}</h3><p>${ex.question}</p><textarea id="ex-input-${idx}" rows="4" placeholder="Введите ваш ответ..."></textarea><button class="check-btn" onclick="checkExercise(${idx}, document.getElementById('ex-input-${idx}').value)">Проверить</button><div id="ex-result-${idx}" class="ex-result"></div>`;
+            if (exercisesCompleted[idx]) { div.querySelector(`#ex-result-${idx}`).innerHTML = '✓ Выполнено!'; div.querySelector(`#ex-result-${idx}`).className = 'ex-result correct'; }
+            container.appendChild(div);
+        });
+    }
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока?')) {
+            exercisesCompleted.fill(false); lessonPassed = false;
+            let stored = []; try { const s = localStorage.getItem('yakut_lessons_done'); if (s) stored = JSON.parse(s); } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            if (window.userProgress?.lessonsDone) window.userProgress.lessonsDone = window.userProgress.lessonsDone.filter(id => id !== lessonId);
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); updateUI(); alert('Прогресс сброшен!');
+        }
+    }
+    document.getElementById('resetLessonBtn').onclick = resetLesson;
+    document.getElementById('prevBtn').onclick = () => window.location.href = 'lesson-5-19.html';
+    document.getElementById('nextBtn').onclick = () => window.location.href = 'lesson-6-1.html';
+    loadProgress(); renderExercises(); updateUI();
+</script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Урок 7-9 | Деепричастные обороты | Саха тыла</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .lesson-container { background: white; border-radius: 28px; padding: 25px; margin: 20px 0; border: 1px solid #d4e6c3; }
+        .lecture-section { background: #f5f9ef; padding: 20px; border-radius: 20px; margin-bottom: 25px; border-left: 5px solid #2a6e3a; }
+        .lecture-section h3 { color: #2e6b3e; margin-bottom: 15px; }
+        .lecture-section p { line-height: 1.6; margin-bottom: 10px; }
+        .lecture-section ul { margin-left: 20px; margin-bottom: 10px; }
+        .lecture-section table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; border-radius: 15px; overflow: hidden; }
+        .lecture-section th, .lecture-section td { border: 1px solid #d4e6c3; padding: 8px 12px; text-align: left; vertical-align: top; }
+        .lecture-section th { background: #e8f5e9; color: #2e6b3e; }
+        .exercise { background: #fefef5; border-radius: 20px; padding: 20px; margin-bottom: 20px; border: 1px solid #d4e6c3; }
+        .exercise h3 { color: #2e6b3e; margin-bottom: 15px; border-bottom: 2px solid #f0daa0; padding-bottom: 8px; }
+        .exercise textarea { width: 100%; padding: 12px; border-radius: 20px; border: 2px solid #c5e0b4; margin: 10px 0; font-family: inherit; font-size: 1rem; resize: vertical; min-height: 100px; background: #fffef7; }
+        .check-btn { background: #dba334; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; margin-top: 10px; margin-right: 10px; }
+        .check-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .ex-result { margin-top: 12px; padding: 12px; border-radius: 20px; font-size: 0.9rem; line-height: 1.4; }
+        .ex-result.correct { background: #c8e6c9; color: #2e7d32; border-left: 4px solid #2e7d32; }
+        .ex-result.incorrect { background: #ffccbc; color: #bf360c; border-left: 4px solid #bf360c; }
+        .progress-bar { background: #e0e0e0; border-radius: 30px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: #2a6e3a; height: 100%; width: 0%; transition: width 0.3s; border-radius: 30px; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; margin-top: 15px; }
+        .status-completed { background: #2a6e3a; color: white; }
+        .status-not-completed { background: #dba334; color: white; }
+        .button-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+        .reset-btn { background: #8b0000; border: none; padding: 10px 25px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .reset-btn:hover { background: #660000; transform: translateY(-2px); }
+        .nav-buttons { display: flex; gap: 15px; justify-content: space-between; margin-top: 25px; flex-wrap: wrap; }
+        .primary-btn { background: #dba334; border: none; padding: 10px 28px; border-radius: 40px; font-weight: bold; cursor: pointer; color: white; }
+        .primary-btn:hover { background: #c2922a; transform: translateY(-2px); }
+        .back-link { color: #2a6e3a; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; }
+        .grammar-table { width: 100%; margin: 15px 0; }
+        .grammar-table td { padding: 8px; }
+        .note-box { background: #e3f2fd; border-radius: 16px; padding: 15px; margin: 15px 0; border-left: 4px solid #1976d2; font-size: 0.95rem; }
+        .sentence-example { background: #fff8e1; padding: 10px 15px; border-radius: 16px; margin: 10px 0; border-left: 4px solid #dba334; }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Урок</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+    <div class="nav-panel">
+        <a href="../../index.html" class="nav-btn">Главная</a>
+        <a href="index.html" class="nav-btn">Уроки</a>
+        <a href="../grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="../dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="../tests/index.html" class="nav-btn">Тесты</a>
+        <a href="../games/index.html" class="nav-btn">Игры</a>
+        <a href="../progress/index.html" class="nav-btn">Прогресс</a>
+    </div>
+    <div class="page-content">
+        <a href="index.html" class="back-link">← К списку уроков</a>
+        <div class="lesson-container">
+            <h2>Урок 7-9: Деепричастные обороты</h2>
+            <div class="lecture-section">
+                <h3>Лекция: Деепричастные обороты в якутском языке</h3>
+                <p>Деепричастный оборот — это конструкция, состоящая из деепричастия и зависимых от него слов. В якутском языке деепричастные обороты обозначают добавочное действие, которое совершается одновременно с основным действием, предшествует ему или является его причиной, целью, условием. Деепричастные обороты делают речь более точной и выразительной.</p>
+                
+                <div class="note-box">
+                    Важно: Деепричастный оборот в якутском языке, как и одиночное деепричастие, всегда относится к подлежащему. Действие, выраженное деепричастным оборотом, и основное действие совершаются одним и тем же лицом.
+                </div>
+                
+                <h3>Виды деепричастных оборотов по значению</h3>
+                
+                <h3>1. Деепричастный оборот образа действия (одновременность)</h3>
+                <p>Образуется с помощью деепричастий на <strong>-ан</strong>, <strong>-эн</strong>, <strong>-он</strong>, <strong>-өн</strong>. Обозначает действие, которое происходит одновременно с основным.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Уол олорон киинэ көрдө. — Мальчик, сидя, смотрел кино.<br>
+                    Кыыс ыллыырын истэн үөрдэ. — Девочка, слушая пение, радовалась.<br>
+                    Айанньыт санаан, ырааппыт. — Путешественник, думая, уехал.
+                </div>
+                
+                <h3>2. Деепричастный оборот времени (предшествование)</h3>
+                <p>Образуется с помощью деепричастий на <strong>-аат</strong>, <strong>-ээт</strong>, <strong>-оот</strong>, <strong>-өөт</strong>. Обозначает действие, которое предшествует основному.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Кэлээт, остуолга олордум. — Придя, сел за стол.<br>
+                    Үөрэнээт, үлэлии барда. — Научившись, пошёл работать.<br>
+                    Аһаан баран, сынньанна. — Поев, отдохнул.
+                </div>
+                
+                <h3>3. Деепричастный оборот причины</h3>
+                <p>Образуется с помощью деепричастий на <strong>-ан</strong> (с контекстуальным значением причины) или отрицательных деепричастий на <strong>-бакка</strong>. Обозначает причину основного действия.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Ыалдьан, кэлбэтим. — Болея, не пришёл (из-за болезни).<br>
+                    Биллибэккэ, киирдэ. — Не замеченным, вошёл.<br>
+                    Утуйан, кэпсэтиини истибэтэ. — Из-за того что спал, не услышал разговор.
+                </div>
+                
+                <h3>4. Деепричастный оборот цели</h3>
+                <p>Образуется с помощью деепричастий на <strong>-аары</strong>, <strong>-ээри</strong>, <strong>-оору</strong>, <strong>-өөрү</strong>. Обозначает цель основного действия.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Саха тылын үөрэнээри, Дьокуускайга көһөн кэллэ. — Чтобы выучить якутский язык, переехал в Якутск.<br>
+                    Эйигин көрөөрү, ыраахтан кэллим. — Чтобы тебя увидеть, издалека пришёл.<br>
+                     Үлэлиир буолан, куоракка барда. — Чтобы работать, уехал в город.
+                </div>
+                
+                <h3>5. Деепричастный оборот условия</h3>
+                <p>Образуется с помощью отрицательных деепричастий на <strong>-бакка</strong> или специальных конструкций. Обозначает условие, при котором совершается основное действие.</p>
+                <div class="sentence-example">
+                    <strong>Примеры:</strong><br>
+                    Кэлбэккэ, ыарахан. — Не придя, трудно.<br>
+                    Суруйбакка, ааҕарым кыаллыбат. — Не написав, прочитать не смогу.
+                </div>
+                
+                <h3>Структура деепричастного оборота</h3>
+                <p>Деепричастный оборот состоит из деепричастия и зависимых от него слов (дополнений, обстоятельств). Зависимые слова ставятся перед деепричастием, как в якутском языке принят порядок: зависимое слово перед главным.</p>
+                
+                <div class="sentence-example">
+                    <strong>Схема оборота:</strong><br>
+                    (зависимое слово) + деепричастие<br>
+                    кинигэни ааҕан — прочитав книгу<br>
+                    ырыаны ыллаан — спев песню<br>
+                    доҕорбун көрөн — увидев моего друга
+                </div>
+                
+                <h3>Обособление деепричастных оборотов</h3>
+                <p>В якутском языке деепричастные обороты, как правило, обособляются запятыми, особенно если они стоят в начале предложения или выделяются интонационно. Короткие обороты, тесно связанные со сказуемым, могут не обособляться.</p>
+                
+                <div class="sentence-example">
+                    <strong>Примеры с обособлением:</strong><br>
+                    Күн тахсан, сырдык бүтэй буолла. — Солнце взошло, и стало светло.<br>
+                    Ырыаны ыллаан, кини үөрдэ. — Спев песню, он обрадовался.<br>
+                    Утуйан олорон, кини кэлэрин күүппүт. — Сидя и засыпая, он ждал его прихода.
+                </div>
+                
+                <h3>Отрицательные деепричастные обороты</h3>
+                <p>Отрицательные деепричастные обороты образуются с помощью отрицательного аффикса <strong>-бакка</strong>, <strong>-бэккэ</strong>, <strong>-покко</strong>, <strong>-пөккө</strong>.</p>
+                
+                <table class="grammar-table">
+                    <tr><th>Утвердительный оборот</th><th>Отрицательный оборот</th><th>Перевод</th></tr>
+                    <tr>
+        
+—
+Суруйан (написав)</td><td>суруйбакка (не написав)</td><td>не написав</td>
+                <tr>
+                <tr><td>кэлэн (придя)</td><td>кэлбэккэ (не придя)</td><td>не придя</td>
+                </tr>
+                <tr><td>көрөн (увидев)</td><td>көрбөккө (не увидев)</td><td>не увидев</td>
+                </tr>
+                <tr><td>ааҕан (прочитав)</td><td>ааҕыбакка (не прочитав)</td><td>не прочитав</td>
+                </tr>
+                </table>
+                
+                <div class="sentence-example">
+                    <strong>Примеры отрицательных оборотов:</strong><br>
+                    Кини кэлбэккэ, мин бардым. — Он не придя, я ушёл.<br>
+                    Суруйбакка, эппиэттээбэтэ. — Не написав, не ответил.
+                </div>
+                
+                <h3>Функции деепричастных оборотов в предложении</h3>
+                <ul>
+                    <li><strong>Обстоятельство образа действия:</strong> Кини күлэн эппитэ. — Он, смеясь, сказал.</li>
+                    <li><strong>Обстоятельство времени:</strong> Кэлээт, кэпсиэм. — Придя, расскажу.</li>
+                    <li><strong>Обстоятельство причины:</strong> Ыалдьан, кэлбэтим. — Болея, не пришёл.</li>
+                    <li><strong>Обстоятельство цели:</strong> Үөрэнээри, үлэлиир. — Чтобы учиться, работает.</li>
+                </ul>
+                
+                <h3>Примеры для анализа</h3>
+                <ul>
+                    <li>Кымыс иһэн, кини сылайда. — Пью кумыс, он согрелся.</li>
+                    <li>Оҕолор олорон үлэлииллэр. — Дети работают сидя.</li>
+                    <li>Киэһэ кэлэн, биһиги кэпсэттибит. — Вечером придя, мы поговорили.</li>
+                    <li>Айанньыт утуйан, поездка хаалла. — Путешественник из-за того что спал, опоздал на поезд.</li>
+                    <li>Эйигин көрсөөрү, эрдэ турдум. — Чтобы встретить тебя, встал рано.</li>
+                    <li>Ырыаны ыллаан, дьон үөрдэ. — Спев песню, народ обрадовался.</li>
+                    <li>Билбэккэ, сыыһа эппит. — Не зная, сказал неправильно.</li>
+                    <li>Саха тылын үөрэнээри, кинигэлэри ааҕар. — Чтобы выучить якутский язык, читает книги.</li>
+                </ul>
+                
+                <h3>Важные замечания</h3>
+                <p>Деепричастные обороты широко используются в якутском языке для создания сложных предложений без союзов. Они помогают избегать повторения подлежащего и делают речь более лаконичной. При переводе с русского языка на якутский придаточные предложения времени, причины, цели часто заменяются деепричастными оборотами. Важно помнить, что действие деепричастного оборота и основного глагола должно совершаться одним и тем же лицом.</p>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div id="exercisesContainer"></div>
+            <div class="status-badge" id="statusBadge">Не пройдено</div>
+            <div class="button-group"><button id="resetLessonBtn" class="reset-btn" style="display: none;">Сбросить прогресс урока</button></div>
+            <div class="nav-buttons">
+                <button id="prevBtn" class="primary-btn">← Предыдущий урок</button>
+                <button id="nextBtn" class="primary-btn">Следующий урок →</button>
+            </div>
+        </div>
+    </div>
+    <footer><div class="footer-ornament"></div><p>© МБОУ «Хоточчунская» ООШ</p></footer>
+</div>
+<script>
+    const lessonId = "7-9";
+    let lessonPassed = false;
+    let exercisesCompleted = new Array(10).fill(false);
+    
+    const exercises = [
+        { question: "1. Какой суффикс используется для образования деепричастного оборота образа действия (одновременность)?", answerKeywords: ["ан", "эн", "он", "өн"], hint: "Суффиксы -ан, -эн, -он, -өн", explanation: "Деепричастия образа действия образуются с помощью суффиксов -ан, -эн, -он, -өн." },
+        { question: "2. Какой суффикс используется для образования деепричастного оборота времени (предшествование)?", answerKeywords: ["аат", "ээт", "оот", "өөт"], hint: "Суффиксы -аат, -ээт, -оот, -өөт", explanation: "Деепричастия времени образуются с помощью суффиксов -аат, -ээт, -оот, -өөт." },
+        { question: "3. Какой суффикс используется для образования деепричастного оборота цели?", answerKeywords: ["аары", "ээри", "оору", "өөрү"], hint: "Суффиксы -аары, -ээри, -оору, -өөрү", explanation: "Деепричастия цели образуются с помощью суффиксов -аары, -ээри, -оору, -өөрү." },
+        { question: "4. Переведите на русский язык: 'Уол олорон киинэ көрдө.'", answerKeywords: ["мальчик сидя смотрел кино"], hint: "Уол — мальчик, олорон — сидя, киинэ — кино, көрдө — смотрел", explanation: "Мальчик, сидя, смотрел кино." },
+        { question: "5. Переведите на якутский язык: 'Придя, сел за стол.'", answerKeywords: ["кэлээт", "остуолга", "олордум"], hint: "Используйте деепричастие времени от глагола 'кэл'", explanation: "Кэлээт, остуолга олордум." },
+        { question: "6. Переведите на русский язык: 'Саха тылын үөрэнээри, Дьокуускайга көһөн кэллэ.'", answerKeywords: ["чтобы выучить якутский язык переехал в якутск"], hint: "Үөрэнээри — чтобы учиться", explanation: "Чтобы выучить якутский язык, переехал в Якутск." },
+        { question: "7. Переведите на якутский язык: 'Болея, не пришёл.'", answerKeywords: ["ыалдьан", "кэлбэтим"], hint: "Используйте деепричастие причины от глагола 'ыалдь'", explanation: "Ыалдьан, кэлбэтим." },
+        { question: "8. Образуйте отрицательный деепричастный оборот от глагола 'суруй' (писать).", answerKeywords: ["суруйбакка"], hint: "Отрицательный аффикс -бакка", explanation: "Суруйбакка (не написав)." },
+        { question: "9. Составьте предложение на якутском языке с деепричастным оборотом цели.", answerKeywords: ["ээри", "аары"], hint: "Используйте деепричастие на -аары или -ээри", explanation: "Пример: Саха тылын үөрэнээри, кинигэни ааҕабын. (Чтобы выучить якутский язык, читаю книгу.)" },
+        { question: "10. Напишите три суффикса деепричастий для разных значений с примерами.", answerKeywords: ["ан", "аат", "аары"], hint: "Образа действия, времени, цели", explanation: "1) -ан (ааҕан — читая); 2) -аат (кэлээт — придя); 3) -аары (үөрэнээри — чтобы учиться)." }
+    ];
+    
+    function saveProgress() { localStorage.setItem(`lesson_${lessonId}_progress`, JSON.stringify({ completed: exercisesCompleted, passed: lessonPassed })); }
+    
+    function loadProgress() { 
+        try { 
+            const saved = localStorage.getItem(`lesson_${lessonId}_progress`); 
+            if (saved) { 
+                const data = JSON.parse(saved); 
+                exercisesCompleted = data.completed; 
+                lessonPassed = data.passed; 
+            } 
+        } catch(e) {} 
+        try { 
+            const saved = localStorage.getItem('yakut_lessons_done'); 
+            if (saved && JSON.parse(saved).includes(lessonId)) lessonPassed = true; 
+        } catch(e) {} 
+        updateUI(); 
+    }
+    
+    function updateUI() {
+        const count = exercisesCompleted.filter(v => v === true).length;
+        const progressFill = document.getElementById('progressFill');
+        if (progressFill) progressFill.style.width = (count/10)*100 + '%';
+        const status = document.getElementById('statusBadge');
+        const resetBtn = document.getElementById('resetLessonBtn');
+        if (lessonPassed || count >= 8) {
+            if (!lessonPassed && count >= 8) {
+                lessonPassed = true;
+                let stored = []; 
+                try { 
+                    const s = localStorage.getItem('yakut_lessons_done'); 
+                    if (s) stored = JSON.parse(s); 
+                } catch(e) {}
+                if (!stored.includes(lessonId)) { 
+                    stored.push(lessonId); 
+                    localStorage.setItem('yakut_lessons_done', JSON.stringify(stored)); 
+                }
+            }
+            if (status) {
+                status.innerHTML = 'Пройдено (' + count + '/10)';
+                status.className = 'status-badge status-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'inline-block';
+        } else { 
+            if (status) {
+                status.innerHTML = 'Не пройдено (' + count + '/10)';
+                status.className = 'status-badge status-not-completed';
+            }
+            if (resetBtn) resetBtn.style.display = 'none';
+        }
+        saveProgress();
+    }
+    
+    function normalizeAnswer(str) {
+        if (!str) return '';
+        return str.toLowerCase()
+            .replace(/[ъь]/g, '')
+            .replace(/[^\wа-яёөүҥһ]/gi, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+    
+    function checkExercise(idx, answer) {
+        const ex = exercises[idx];
+        const normalizedAnswer = normalizeAnswer(answer);
+        let isCorrect = false;
+        
+        if (idx === 9) {
+            const hasAn = normalizedAnswer.includes("ан") || normalizedAnswer.includes("эн");
+            const hasAat = normalizedAnswer.includes("аат") || normalizedAnswer.includes("ээт");
+            const hasAary = normalizedAnswer.includes("аары") || normalizedAnswer.includes("ээри");
+            isCorrect = (hasAn && hasAat && hasAary);
+        } else if (idx === 8) {
+            const hasAary = normalizedAnswer.includes("аары") || normalizedAnswer.includes("ээри");
+            isCorrect = hasAary;
+        } else if (idx === 7) {
+            const hasYaldyan = normalizedAnswer.includes("ыалдьан");
+            const hasKelbetim = normalizedAnswer.includes("кэлбэтим");
+            isCorrect = (hasYaldyan && hasKelbetim);
+        } else if (idx === 6) {
+            const hasUyreneeri = normalizedAnswer.includes("үөрэнээри");
+            const hasDjokuuskayga = normalizedAnswer.includes("дьокуускайга");
+            isCorrect = (hasUyreneeri || hasDjokuuskayga);
+        } else if (idx === 5) {
+            const hasKeleet = normalizedAnswer.includes("кэлээт") || normalizedAnswer.includes("кэлээт");
+            const hasOstuolga = normalizedAnswer.includes("остуолга");
+            const hasOlordum = normalizedAnswer.includes("олордум");
+            isCorrect = (hasKeleet && (hasOstuolga || hasOlordum));
+        } else if (idx === 4) {
+            const hasOloron = normalizedAnswer.includes("олорон");
+            const hasKino = normalizedAnswer.includes("киинэ");
+            isCorrect = (hasOloron && hasKino);
+        } else {
+            const allKeywordsPresent = ex.answerKeywords.every(keyword => 
+                normalizedAnswer.includes(keyword.toLowerCase())
+            );
+            isCorrect = allKeywordsPresent;
+        }
+        
+        const resultDiv = document.getElementById(`ex-result-${idx}`);
+        if (isCorrect) { 
+            exercisesCompleted[idx] = true; 
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Верно. ' + (ex.explanation || '');
+                resultDiv.className = 'ex-result correct';
+            }
+        } else { 
+            exercisesCompleted[idx] = false;
+            if (resultDiv) {
+                resultDiv.innerHTML = 'Неверно. ' + (ex.hint || 'Попробуйте ещё раз, сверьтесь с лекцией.');
+                resultDiv.className = 'ex-result incorrect';
+            }
+        }
+        updateUI(); 
+        saveProgress();
+    }
+    
+    function renderExercises() {
+        const container = document.getElementById('exercisesContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        exercises.forEach((ex, idx) => {
+            const div = document.createElement('div'); 
+            div.className = 'exercise';
+            div.innerHTML = '<h3>Упражнение ' + (idx+1) + '</h3><p>' + ex.question + '</p><textarea id="ex-input-' + idx + '" rows="3" placeholder="Введите ваш ответ на якутском языке..."></textarea><button class="check-btn" onclick="checkExercise(' + idx + ', document.getElementById(\'ex-input-' + idx + '\').value)">Проверить</button><div id="ex-result-' + idx + '" class="ex-result"></div>';
+            if (exercisesCompleted[idx]) { 
+                const resultDiv = div.querySelector('#ex-result-' + idx);
+                if (resultDiv) {
+                    resultDiv.innerHTML = 'Выполнено. ' + (ex.explanation || '');
+                    resultDiv.className = 'ex-result correct';
+                }
+            }
+            container.appendChild(div);
+        });
+    }
+    
+    function resetLesson() {
+        if (confirm('Сбросить прогресс урока? Все ваши ответы будут удалены.')) {
+            exercisesCompleted.fill(false); 
+            lessonPassed = false;
+            let stored = []; 
+            try { 
+                const s = localStorage.getItem('yakut_lessons_done'); 
+                if (s) stored = JSON.parse(s); 
+            } catch(e) {}
+            localStorage.setItem('yakut_lessons_done', JSON.stringify(stored.filter(id => id !== lessonId)));
+            localStorage.removeItem(`lesson_${lessonId}_progress`);
+            renderExercises(); 
+            updateUI(); 
+            alert('Прогресс урока сброшен.');
+        }
+    }
+    
+    function init() {
+        loadProgress(); 
+        renderExercises(); 
+        updateUI();
+        const resetBtn = document.getElementById('resetLessonBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if (resetBtn) resetBtn.onclick = resetLesson;
+        if (prevBtn) prevBtn.onclick = () => window.location.href = 'lesson-7-8.html';
+        if (nextBtn) nextBtn.onclick = () => window.location.href = 'lesson-7-10.html';
+    }
+    
+    document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
