@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Саха Тыла | Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <head>
+    <link rel="icon" type="image/png" href="images/иконка.png">
+</head>
+    <style>
+        .travel-map {
+            background: linear-gradient(135deg, #fef7e4 0%, #f7e5bb 100%);
+            border-radius: 28px;
+            padding: 25px;
+            margin: 30px 0 20px;
+            border: 1px solid #dba334;
+        }
+        
+        .travel-map h3 {
+            text-align: center;
+            color: #2a6e3a;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .travel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .travel-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #d4e6c3;
+            transition: all 0.3s;
+        }
+        
+        .travel-card.completed {
+            border: 2px solid #2a6e3a;
+            background: #e8f5e9;
+        }
+        
+        .travel-class {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2a6e3a;
+            margin-bottom: 10px;
+        }
+        
+        .travel-stats {
+            font-size: 0.85rem;
+            color: #5a7a5a;
+            margin: 10px 0;
+        }
+        
+        .travel-progress-bar {
+            background: #e0e0e0;
+            border-radius: 30px;
+            height: 12px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        
+        .travel-progress-fill {
+            background: #2a6e3a;
+            height: 100%;
+            width: 0%;
+            border-radius: 30px;
+            transition: width 0.5s;
+        }
+        
+        .certificate-btn {
+            background: #dba334;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        
+        .certificate-btn:hover:not(:disabled) {
+            background: #c2922a;
+            transform: translateY(-2px);
+        }
+        
+        .certificate-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
+        .travel-status {
+            font-size: 0.75rem;
+            margin-top: 10px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .status-completed {
+            background: #2a6e3a;
+            color: white;
+        }
+        
+        .status-not {
+            background: #f0daa0;
+            color: #2c5a2a;
+        }
+        
+        .certificate-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .certificate-content {
+            background: linear-gradient(135deg, #fff8e1 0%, #fefef5 100%);
+            max-width: 500px;
+            width: 90%;
+            border-radius: 28px;
+            padding: 35px;
+            text-align: center;
+            border: 8px double #dba334;
+            position: relative;
+        }
+        
+        .certificate-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .certificate-title {
+            font-size: 1.6rem;
+            color: #2a6e3a;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .certificate-student {
+            font-size: 1.3rem;
+            color: #dba334;
+            margin: 15px 0;
+            padding: 8px 20px;
+            border-bottom: 2px dashed #dba334;
+            display: inline-block;
+        }
+        
+        .certificate-class {
+            font-size: 1rem;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        
+        .certificate-message {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 20px 0;
+            color: #333;
+            font-style: italic;
+            background: #f5f9ef;
+            padding: 15px;
+            border-radius: 20px;
+        }
+        
+        .certificate-date {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 15px;
+        }
+        
+        .certificate-close {
+            background: #2a6e3a;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        footer {
+            background: #2c5a2a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .travel-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="app-wrapper">
+    <div class="ethnic-header">
+        <div class="header-logo"></div>
+        <div class="ornament-line top"></div>
+        <div class="title-main">Саха тыла — Хоточчунская ООШ</div>
+        <div class="school-badge">Электронное пособие для 5–7 классов</div>
+        <div class="ornament-line bottom"></div>
+    </div>
+
+    <div class="nav-panel">
+        <a href="index.html" class="nav-btn active">Главная</a>
+        <a href="pages/lessons/index.html" class="nav-btn">Уроки</a>
+        <a href="pages/grammar/index.html" class="nav-btn">Грамматика</a>
+        <a href="pages/dictionary/index.html" class="nav-btn">Словарь</a>
+        <a href="pages/tests/index.html" class="nav-btn">Тесты</a>
+        <a href="pages/games/index.html" class="nav-btn">Игры</a>
+        <a href="pages/progress/index.html" class="nav-btn">Мой прогресс</a>
+    </div>
+
+    <div class="page-content">
+        <div class="hero-section">
+            <div class="ornament-corner"></div>
+            <div class="hero-flex">
+                <div class="hero-text">
+                    <div class="greeting">Нөрүөн нөргүй</div>
+                    <div class="greeting-small">Добро пожаловать</div>
+                    <p class="welcome-text">Электронное пособие для изучения якутского языка в 5–7 классах. Уроки, грамматика, словарь и тесты — всё для эффективного обучения.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/дети.jpg" alt="Изучение языка">
+                </div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <div class="section-title">
+                <div class="title-decoration"></div>
+                <h2>Возможности пособия</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-number">01</div>
+                    <div class="feature-title">60 уроков</div>
+                    <div class="feature-desc">20 уроков для каждого класса</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">02</div>
+                    <div class="feature-title">60 грамматических тем</div>
+                    <div class="feature-desc">20 тем на класс</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">03</div>
+                    <div class="feature-title">250+ слов</div>
+                    <div class="feature-desc">С возможностью озвучивания</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">04</div>
+                    <div class="feature-title">60 тестов</div>
+                    <div class="feature-desc">Для проверки знаний</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">05</div>
+                    <div class="feature-title">3 игры</div>
+                    <div class="feature-desc">Для увлекательного изучения</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="classes-section">
+            <div class="section-title">
+                <div class="title-decoration"></div>
+                <h2>Уровни обучения</h2>
+            </div>
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="class-icon">Ⅰ</div>
+                    <div class="class-number">5 класс</div>
+                    <div class="class-name">Начальный уровень</div>
+                    <div class="class-desc">Алфавит, приветствия, семья, цвета, числа, животные</div>
+                    <div class="class-tag">С нуля</div>
+                </div>
+                <div class="class-card">
+                    <div class="class-icon">Ⅱ</div>
+                    <div class="class-number">6 класс</div>
+                    <div class="class-name">Средний уровень</div>
+                    <div class="class-desc">Глаголы, падежи, времена, прилагательные, наречия</div>
+                    <div class="class-tag">Продолжающие</div>
+                </div>
+                <div class="class-card">
+                    <div class="class-icon">Ⅲ</div>
+                    <div class="class-number">7 класс</div>
+                    <div class="class-name">Продвинутый уровень</div>
+                    <div class="class-desc">Причастия, деепричастия, сложные предложения, диалоги</div>
+                    <div class="class-tag">Уверенные знания</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-links">
+            <div class="ornament-diamond"></div>
+            <h3>Быстрый старт</h3>
+            <div class="quick-buttons">
+                <a href="pages/lessons/index.html" class="quick-btn">Начать уроки</a>
+                <a href="pages/grammar/index.html" class="quick-btn">Грамматика</a>
+                <a href="pages/tests/index.html" class="quick-btn">Пройти тест</a>
+                <a href="pages/dictionary/index.html" class="quick-btn">Изучить слова</a>
+                <a href="pages/games/index.html" class="quick-btn">Игры</a>
+                <a href="pages/progress/index.html" class="quick-btn">Мой прогресс</a>
+            </div>
+        </div>
+
+        <div class="travel-map">
+            <h3>Карта путешественника</h3>
+            <div class="travel-grid">
+                <div class="travel-card" id="travel5">
+                    <div class="travel-class">5 класс</div>
+                    <div class="travel-stats" id="stats5">Пройдено 0 из 20 уроков</div>
+                    <div class="travel-progress-bar">
+                        <div class="travel-progress-fill" id="progress5"></div>
+                    </div>
+                    <button class="certificate-btn" id="cert5" onclick="showCertificate(5)">Получить сертификат</button>
+                    <div class="travel-status" id="status5">В процессе</div>
+                </div>
+                <div class="travel-card" id="travel6">
+                    <div class="travel-class">6 класс</div>
+                    <div class="travel-stats" id="stats6">Пройдено 0 из 20 уроков</div>
+                    <div class="travel-progress-bar">
+                        <div class="travel-progress-fill" id="progress6"></div>
+                    </div>
+                    <button class="certificate-btn" id="cert6" onclick="showCertificate(6)">Получить сертификат</button>
+                    <div class="travel-status" id="status6">В процессе</div>
+                </div>
+                <div class="travel-card" id="travel7">
+                    <div class="travel-class">7 класс</div>
+                    <div class="travel-stats" id="stats7">Пройдено 0 из 20 уроков</div>
+                    <div class="travel-progress-bar">
+                        <div class="travel-progress-fill" id="progress7"></div>
+                    </div>
+                    <button class="certificate-btn" id="cert7" onclick="showCertificate(7)">Получить сертификат</button>
+                    <div class="travel-status" id="status7">В процессе</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+    <div class="cloud cloud5"></div>
+    <div class="star star1">✦</div>
+    <div class="star star2">✦</div>
+    <div class="star star3">✦</div>
+    <div class="star star4">✦</div>
+    <div class="star star5">✦</div>
+    <div class="leaf leaf1">🍃</div>
+    <div class="leaf leaf2">🍂</div>
+    <div class="leaf leaf3">🍃</div>
+    <div class="leaf leaf4">🍂</div>
+
+    <footer>
+        <p>© МБОУ «Хоточчунская» ООШ</p>
+        <p>Дополнительные занятия по якутскому языку</p>
+    </footer>
+</div>
+
+<div id="certificateModal" class="certificate-modal">
+    <div class="certificate-content">
+        <div class="certificate-icon"></div>
+        <div class="certificate-title">Сертификат</div>
+        <div class="certificate-student" id="certStudentName">Ученик</div>
+        <div class="certificate-class" id="certClass"></div>
+        <div class="certificate-message" id="certMessage"></div>
+        <div class="certificate-date" id="certDate"></div>
+        <button class="certificate-close" onclick="closeCertificate()">Закрыть</button>
+    </div>
+</div>
+
+<script>
+    const motivationMessages = {
+        5: [
+            "Ты сделал первый шаг к изучению якутского языка! Так держать!",
+            "Поздравляю! Ты освоил основы якутского языка. Впереди ещё больше интересного!",
+            "Отличная работа! Ты уже многое знаешь о языке саха. Продолжай в том же духе!"
+        ],
+        6: [
+            "Ты стал настоящим знатоком якутской грамматики! Так держать!",
+            "Поздравляю! Твой прогресс впечатляет. Язык саха открывает тебе свои тайны!",
+            "Отлично! Ты уже можешь строить сложные предложения на якутском языке. Уверенно иди дальше!"
+        ],
+        7: [
+            "Великолепно! Ты освоил продвинутый уровень якутского языка!",
+            "Поздравляю с завершением курса! Ты теперь знаешь язык саха на высоком уровне!",
+            "Ты настоящий знаток якутского языка! Твои усилия принесли плоды. Горжусь тобой!"
+        ]
+    };
+
+    function getLessonsProgress() {
+        try {
+            const saved = localStorage.getItem('yakut_lessons_done');
+            if (saved) return JSON.parse(saved);
+        } catch(e) {}
+        return [];
+    }
+
+    function getCompletedCount(classNum) {
+        const done = getLessonsProgress();
+        let count = 0;
+        for (let i = 1; i <= 20; i++) {
+            if (done.includes(classNum + '-' + i)) count++;
+        }
+        return count;
+    }
+
+    function updateTravelMap() {
+        for (let cls of [5, 6, 7]) {
+            const completed = getCompletedCount(cls);
+            const percent = (completed / 20) * 100;
+            
+            const statsSpan = document.getElementById('stats' + cls);
+            const progressFill = document.getElementById('progress' + cls);
+            const statusSpan = document.getElementById('status' + cls);
+            const certBtn = document.getElementById('cert' + cls);
+            const travelCard = document.getElementById('travel' + cls);
+            
+            if (statsSpan) statsSpan.innerHTML = `Пройдено ${completed} из 20 уроков`;
+            if (progressFill) progressFill.style.width = percent + '%';
+            
+            const isCompleted = completed >= 20;
+            
+            if (statusSpan) {
+                if (isCompleted) {
+                    statusSpan.innerHTML = 'Завершено';
+                    statusSpan.className = 'travel-status status-completed';
+                } else {
+                    statusSpan.innerHTML = 'В процессе';
+                    statusSpan.className = 'travel-status status-not';
+                }
+            }
+            
+            if (certBtn) certBtn.disabled = !isCompleted;
+            if (travelCard && isCompleted) travelCard.classList.add('completed');
+            else if (travelCard) travelCard.classList.remove('completed');
+        }
+    }
+
+    function getIssuedCertificates() {
+        try {
+            const saved = localStorage.getItem('yakut_certificates_issued');
+            if (saved) return JSON.parse(saved);
+        } catch(e) {}
+        return [];
+    }
+
+    function saveIssuedCertificate(classNum) {
+        const issued = getIssuedCertificates();
+        if (!issued.includes(classNum)) {
+            issued.push(classNum);
+            localStorage.setItem('yakut_certificates_issued', JSON.stringify(issued));
+        }
+    }
+
+    function showCertificate(classNum) {
+        const completed = getCompletedCount(classNum);
+        if (completed < 20) {
+            alert(`Вы ещё не завершили ${classNum} класс. Нужно пройти все 20 уроков!`);
+            return;
+        }
+        
+        let studentName = localStorage.getItem('yakut_student_name');
+        if (!studentName) {
+            studentName = prompt('Введите ваше имя для сертификата:', 'Ученик');
+            if (studentName) localStorage.setItem('yakut_student_name', studentName);
+            else studentName = 'Ученик';
+        }
+        
+        saveIssuedCertificate(classNum);
+        
+        const messages = motivationMessages[classNum];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        const className = classNum === 5 ? '5 класса' : (classNum === 6 ? '6 класса' : '7 класса');
+        const classLevel = classNum === 5 ? 'начальный уровень' : (classNum === 6 ? 'средний уровень' : 'продвинутый уровень');
+        
+        document.getElementById('certStudentName').textContent = studentName;
+        document.getElementById('certClass').innerHTML = `успешно завершил(а) изучение <strong>${className}</strong><br><span style="font-size: 0.85rem;">(${classLevel})</span>`;
+        document.getElementById('certMessage').textContent = randomMessage;
+        document.getElementById('certDate').textContent = new Date().toLocaleDateString('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' });
+        
+        document.getElementById('certificateModal').style.display = 'flex';
+    }
+    
+    function closeCertificate() {
+        document.getElementById('certificateModal').style.display = 'none';
+    }
+    
+    function init() {
+        updateTravelMap();
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'yakut_lessons_done') updateTravelMap();
+        });
+        setInterval(updateTravelMap, 2000);
+    }
+    
+    document.addEventListener('click', function(e) {
+        const modal = document.getElementById('certificateModal');
+        if (e.target === modal) closeCertificate();
+    });
+    
+    document.addEventListener('DOMContentLoaded', init);
+    
+    window.showCertificate = showCertificate;
+    window.closeCertificate = closeCertificate;
+</script>
+</body>
+</html>
